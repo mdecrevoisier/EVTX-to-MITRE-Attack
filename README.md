@@ -1,20 +1,20 @@
 # EVTX to MITRE Att@ck
 
 ## Project purpose
-**EVTX to MITRE Att@ck** is a *Security Information Management System* orientated project. It provides Windows IOCs indicators classified per Tactic and Technique in order to address different security scenarios in your SIEM:
+**EVTX to MITRE Att@ck** is a *Security Information Management System* orientated project. It provides Windows IOCs indicators classified per Tactic and Technique in order to address different security scenarios with your SIEM:
 * Measure your security coverage 
 * Enhance your detection capacities
 * Identify security gaps or uncovered threats
 * Design new use cases
 
 ## How to use the IOCs
-IOCs are provided in the EVTX format, the standard format established by Microsoft starting Windows Server 2008 and Windows Vista for event logs. Depending on the SIEM solution you utilize (NXLog, Winlogbeat, Splunk UF, ArcSight, WinCollect, Snare, ...), you may need to make your agent pointing to the EVTX files and send the content to your SIEM in the adequate format.
+IOCs are provided in the EVTX format, the standard format established by Microsoft starting Windows Server 2008 and Windows Vista for event logs. Depending on the SIEM solution you utilize, you may need to make your agent (NXLog, Winlogbeat, Splunk UF, ArcSight, WinCollect, Snare, ...) pointing to the EVTX files and send the content to your SIEM in the adequate format.
 
 ## Microsoft log sources used:
 * Windows Server 2012 R2 or higher
 * Windows 10 or higher
 * Active Directory Domain Services (ADDS)
-* Active Directory Certification Services (ADCS / PKI) with online responder 
+* Active Directory Certification Services (ADCS / PKI) with online responder (OCSP)
 * SQL Server 20014
 * SYSMON v11 -- *in progress*
 * Windows Defender -- *in progress*
@@ -22,8 +22,8 @@ IOCs are provided in the EVTX format, the standard format established by Microso
 * SharePoint -- *planned*
 * Internet Information Services (IIS web server) -- *planned*
 
-## Similar projects
-If you are interesting in external projects or articles involving topics like SIGMA, WHIDS, EVTX, ... I would like to mention the following one:
+## Related and/or connected projects:
+If you are interesting in external projects or articles involving topics like SIGMA, WHIDS, EVTX, ... I would like to mention the following ones:
 * **EVTX-ATTACK** from @ sbousseaden: https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES
 * **GENE** (*Go Evtx sigNature Engine*) from @qjerome: https://github.com/0xrawsec/gene
 * Export EVTX to Elastic with Winlogbeat: https://medium.com/@duzvik/import-evtx-collections-in-to-elastic-989b7f49b4b8 
