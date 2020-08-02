@@ -30,9 +30,8 @@ If you are interesting in external projects or articles involving topics like SI
 
 ## IOCs content
 
-Att@ck Tactic	| Att@ck  Technique	| Description | 	Event IDs   | 	Requirements
-|:-------------------------|:------------------|:-------------------------|:------------------|:-------------------------|
-Github
+Att@ck Tactic	| Att@ck  Technique	| Description | 	Event IDs   |
+|:-------------------------|:------------------|:-------------------------|:------------------|
 TA0002-Execution | T1053.005-Scheduled Task | Command execution for schedule task creation detected | 4688
 TA0002-Execution | T1053.005-Scheduled Task | Schedule task created and deleted in a short period of time | 4698-4699
 TA0002-Execution | T1053.005-Scheduled Task | Schedule task created by a user account | 4698
