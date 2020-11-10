@@ -27,6 +27,7 @@ If you are interesting in external projects or articles involving topics like SI
 * **EVTX-ATTACK** from @ sbousseaden: https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES
 * **GENE** (*Go Evtx sigNature Engine*) from @qjerome: https://github.com/0xrawsec/gene
 * **Mordor dataset**: https://mordordatasets.com/notebooks/small/windows/windows.html
+* **Atomic RedTeam**: https://github.com/redcanaryco/atomic-red-team
 * Export EVTX to Elastic with Winlogbeat: https://medium.com/@duzvik/import-evtx-collections-in-to-elastic-989b7f49b4b8 
 
 ## IOCs content
