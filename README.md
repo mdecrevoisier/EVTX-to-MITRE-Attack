@@ -15,7 +15,7 @@ IOCs are provided in the EVTX format, the standard format established by Microso
 * Windows 10 or higher
 * Active Directory Domain Services (ADDS)
 * Active Directory Certification Services (ADCS / PKI) with online responder (OCSP)
-* SQL Server 20014
+* SQL Server 2014
 * SYSMON v11 -- *in progress*
 * Windows Defender -- *in progress*
 * Exchange 2013 -- *planned*
