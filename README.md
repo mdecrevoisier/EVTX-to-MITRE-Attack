@@ -47,7 +47,7 @@ TA0003-Persistence | T1098.xxx-Account manipulation | Computer account set with 
 TA0003-Persistence | T1098.xxx-Account Manipulation | Member added to a group by the same account | 4728/29,4756/57,4732/33
 TA0003-Persistence | T1098.xxx-Account manipulation | SQL Server: new member added to a database role | 33205
 TA0003-Persistence | T1098.xxx-Account manipulation | SQL Server: new member added to server role | 33205
-TA0003-Persistence | T1098.xxx-Account manipulation | User account set with new SPN | 4738
+TA0003-Persistence | T1098.xxx-Account manipulation | User account set with new SPN | 4738/5136
 TA0003-Persistence | T1136.001-Create account-Local account | Guest account (and support_388945a0) account activated | 4722
 TA0003-Persistence | T1136.001-Create account-Local account | Local user account created on a single host | 4720
 TA0003-Persistence | T1136.001-Create account-Local account | SQL Server: disabled SA account enabled | 33205
@@ -57,7 +57,7 @@ TA0003-Persistence | T1136.002-Create account-Domain account | Computer account 
 TA0003-Persistence | T1136.002-Create account-Domain account | New administrator account created (contains "admin" or likely) | 4720
 TA0003-Persistence | T1136.002-Create account-Domain account | User account created and deleted in a short period of time | 4720/4726
 TA0003-Persistence | T1136.002-Create account-Domain account | User account created to fake a computer account (ends with "$") | 4720
-TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL Server xp_cmdshell procedure activated | 18456
+TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL Server xp_cmdshell procedure activated | 18457
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Attempt to create a service detected (sc) | 4688
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Mimikatz service driver installation detected (mimidrv.sys) | 7045
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | New service installation by a user account detected | 7045
@@ -87,10 +87,10 @@ TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single so
 TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single source with different non existing accounts | 33205
 TA0006-Credential Access | T1110.xxx-Brut force | Login failure from multiple sources to a single target with a single user (wrong password) | 33205
 TA0006-Credential Access | T1552.004-Unsecured Credentials-Private Keys | Unknown application accessing certificate private key detected | 70 (CAPI2)
-TA0006-Credential Access | T1558.001-Golden Ticket  | Kerberos TGS ticket request related to a potential Kerberos ticket | 4769
+TA0006-Credential Access | T1558.001-Golden Ticket  | Kerberos TGS ticket request related to a potential Golden ticket | 4769
 TA0006-Credential Access | T1558.001-Golden Ticket  | Success login using a potential Golden ticket | 4624
+TA0006-Credential Access | T1558.003-Kerberoasting  | Command execution related to Kerberos SPN enumeration activity detected | 4688/600/800/4103/4104
 TA0006-Credential Access | T1558.003-Kerberoasting  | KerberOAST ticket (TGS) request detected (low encryption) | 4769
-TA0007-Discovery | T1087.002-Domain Account discovery | Command execution related to Kerberos SPN enumeration activity detected | 4688
 TA0007-Discovery | T1087.002-Domain Account discovery | Honeypot object (container, computer, group, user) accessed | 4662/4624
 TA0007-Discovery | T1087.002-Domain Account discovery | Single source performing host enumeration over Kerberos ticket (TGS) detected | 4769
 TA0007-Discovery | T1135.xxx-Network Share Discovery | Host performing advanced named pipes enumeration on different hosts detected | 5145
