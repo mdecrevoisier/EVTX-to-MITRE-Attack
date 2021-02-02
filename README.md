@@ -60,7 +60,6 @@ TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL Server xp_cmdshell p
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Attempt to create a service detected (sc) | 4688
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Mimikatz service driver installation detected (mimidrv.sys) | 7045
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | New service installation by a user account detected | 7045
-TA0004-Privilege Escalation |  | SQL Server: started in single mode for password recovery TO REVIEW | 4688
 TA0004-Privilege Escalation | T1134.xxx-Access Token Manipulation | New access right granted to an account by a standard user | 4717
 TA0004-Privilege Escalation | T1134.xxx-Access Token Manipulation | New user right granted to an account by a standard user | 4704
 TA0005-Defense Evasion | T1070.001-Indicator Removal on Host | Event log file(s) cleared | 104 / 1102
