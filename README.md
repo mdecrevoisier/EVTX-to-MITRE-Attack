@@ -43,7 +43,7 @@ TA0003-Persistence | T1098.xxx-Account Manipulation  | Member added to a built-i
 TA0003-Persistence | T1098.xxx-Account Manipulation  | Member added to a local group by a user account | 4732/4733
 TA0003-Persistence | T1098.xxx-Account Manipulation  | User performing massive group membership changes on multiple differents groups | 4728/29,4756/57
 TA0003-Persistence | T1098.xxx-Account manipulation | Computer account set with new SPN | 4742
-TA0003-Persistence | T1098.xxx-Account manipulation | Member added to a built-in Exchange security group | 4728,4756,4732
+TA0003-Persistence | T1098.xxx-Account manipulation | Member added to a built-in Exchange security group | 4756
 TA0003-Persistence | T1098.xxx-Account Manipulation | Member added to a group by the same account | 4728/29,4756/57,4732/33
 TA0003-Persistence | T1098.xxx-Account manipulation | SQL Server: new member added to a database role | 33205
 TA0003-Persistence | T1098.xxx-Account manipulation | SQL Server: new member added to server role | 33205
@@ -84,7 +84,7 @@ TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification |
 TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | Firewall rule created by a suspicious command (netsh.exe, wmiprvse.exe) | 2004
 TA0006-Credential Access | T1003.003-OS Credential-Dumping NTDS | Command execution related to a suspicious DSRM activity detected | 4688
 TA0006-Credential Access | T1003.003-OS Credential-Dumping NTDS | DSRM (Directory Service Restore Mode) password reset on one or many DCs | 4794
-TA0006-Credential Access | T1003.006-DCSync | Member added to a sensitive Exchange security group to perform DCsync attack | 4728,4756,4732
+TA0006-Credential Access | T1003.006-DCSync | Member added to a sensitive Exchange security group to perform DCsync attack | 4756
 TA0006-Credential Access | T1003.006-DCSync | Sensitive GUID related to "Replicate directory changes" detected  | 4662
 TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single source because of authentication restrictions (Kerberos/mixed) | 33205
 TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single source with a disabled account | 33205
