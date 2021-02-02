@@ -28,6 +28,7 @@ If you are interesting in external projects or articles involving topics like SI
 * **Mordor dataset**: https://mordordatasets.com/notebooks/small/windows/windows.html
 * **Atomic RedTeam**: https://github.com/redcanaryco/atomic-red-team
 * Export EVTX to Elastic with Winlogbeat: https://medium.com/@duzvik/import-evtx-collections-in-to-elastic-989b7f49b4b8 
+* **EvtxToElk**: https://www.dragos.com/blog/industry-news/evtxtoelk-a-python-module-to-load-windows-event-logs-into-elasticsearch/
 
 ## IOCs content
 
