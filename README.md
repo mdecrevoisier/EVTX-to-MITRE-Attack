@@ -34,6 +34,10 @@ If you are interesting in external projects or articles involving topics like SI
 
 Att@ck Tactic	| Att@ck  Technique	| Description | 	Event IDs   |
 |:-------------------------|:------------------|:-------------------------|:------------------|
+Antivirus | Antivirus | Defender: antivirus not up to date | 1151
+Antivirus | Antivirus | Defender: exception added | 5007
+Antivirus | Antivirus | Defender: massive malware outbreak detected on multiple hosts | 1116
+Antivirus | Antivirus | Defender: massive malwares detected on a single host | 1116
 TA0002-Execution | T1053.005-Scheduled Task | Command execution for schedule task creation detected | 4688
 TA0002-Execution | T1053.005-Scheduled Task | Schedule task created and deleted in a short period of time | 4698-4699
 TA0002-Execution | T1053.005-Scheduled Task | Schedule task created by a user account | 4698
@@ -58,6 +62,8 @@ TA0003-Persistence | T1136.002-Create account-Domain account | New administrator
 TA0003-Persistence | T1136.002-Create account-Domain account | User account created and deleted in a short period of time | 4720/4726
 TA0003-Persistence | T1136.002-Create account-Domain account | User account created to fake a computer account (ends with "$") | 4720
 TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL Server xp_cmdshell procedure activated | 18457
+TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL Server: sqlcmd & ossql utilities abuse | 4688
+TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL Server: started in single mode for password recovery | 4688
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Attempt to create a service detected (sc) | 4688
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Mimikatz service driver installation detected (mimidrv.sys) | 7045
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | New service installation by a user account detected | 7045
@@ -82,6 +88,7 @@ TA0005-Defense Evasion | T1078.002-Valid accounts-Domain accounts | Login from a
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Network share permissions changed | 5143
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | OCSP security settings changed | 5124 (OCSP)
 TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | Firewall rule created by a suspicious command (netsh.exe, wmiprvse.exe) | 2004
+TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | Firewall rule created by a user account | 2004
 TA0006-Credential Access | T1003.003-OS Credential-Dumping NTDS | Command execution related to a suspicious DSRM activity detected | 4688
 TA0006-Credential Access | T1003.003-OS Credential-Dumping NTDS | DSRM (Directory Service Restore Mode) password reset on one or many DCs | 4794
 TA0006-Credential Access | T1003.006-DCSync | Member added to a sensitive Exchange security group to perform DCsync attack | 4756
@@ -89,7 +96,6 @@ TA0006-Credential Access | T1003.006-DCSync | Sensitive GUID related to "Replica
 TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single source because of authentication restrictions (Kerberos/mixed) | 33205
 TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single source with a disabled account | 33205
 TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single source with different non existing accounts | 33205
-TA0006-Credential Access | T1110.xxx-Brut force | Login failure from multiple sources to a single target with a single user (wrong password) | 33205
 TA0006-Credential Access | T1552.004-Unsecured Credentials-Private Keys | Unknown application accessing certificate private key detected | 70 (CAPI2)
 TA0006-Credential Access | T1558.001-Golden Ticket  | Kerberos TGS ticket request related to a potential Golden ticket (lowercase) | 4769
 TA0006-Credential Access | T1558.001-Golden Ticket  | Success login using a potential Golden ticket | 4624
@@ -101,7 +107,3 @@ TA0007-Discovery | T1087-Account discovery | Command execution related to Kerber
 TA0008-Lateral Movement | T1021.001-Remote Desktop Protocol | Denied RDP authentication with valid credentials | 4825
 TA0008-Lateral Movement | T1021.002 -SMB Windows Admin Shares | Host performing access to ADMIN$ share | 5140/5145
 TA0008-Lateral Movement | T1021.002 -SMB Windows Admin Shares | New file share created on a host | 5142
-Antivirus | Antivirus | Defender: antivirus not up to date | 1151
-Antivirus | Antivirus | Defender: exception added | 5007
-Antivirus | Antivirus | Defender: massive malware outbreak detected on multiple hosts | 1116
-Antivirus | Antivirus | Defender: massive malwares detected on a single host | 1116
