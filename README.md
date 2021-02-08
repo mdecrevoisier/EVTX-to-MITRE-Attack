@@ -52,8 +52,13 @@ TA0003-Persistence | T1098.xxx-Account manipulation | Member added to a built-in
 TA0003-Persistence | T1098.xxx-Account Manipulation | Member added to a group by the same account | 4728/29,4756/57,4732/33
 TA0003-Persistence | T1098.xxx-Account manipulation | SQL Server: new member added to a database role | 33205
 TA0003-Persistence | T1098.xxx-Account manipulation | SQL Server: new member added to server role | 33205
-TA0003-Persistence | T1098.xxx-Account manipulation | User account set with new SPN | 5136
-TA0003-Persistence | T1136.001-Create account-Local account | Guest account (and support_388945a0) account activated | 4722
+TA0003-Persistence | T1098.xxx-Account manipulation | User account created and/or set with reversible encryption detected | 4738
+TA0003-Persistence | T1098.xxx-Account manipulation | User account marked as "sensitive and cannot be delegated" its had protection removed | 4738
+TA0003-Persistence | T1098.xxx-Account manipulation | User account set to use Kerberos DES encryption | 4738
+TA0003-Persistence | T1098.xxx-Account manipulation | User account set with new SPN | 4738/5136
+TA0003-Persistence | T1098.xxx-Account manipulation | User account with password set to never expire detected | 4738
+TA0003-Persistence | T1098.xxx-Account manipulation | User account with password set to not require detected | 4738
+TA0003-Persistence | T1136.001-Create account-Local account | Disbaed Guest (and support_388945a0) accounts enabled | 4722
 TA0003-Persistence | T1136.001-Create account-Local account | Local user account created on a single host | 4720
 TA0003-Persistence | T1136.001-Create account-Local account | SQL Server: disabled SA account enabled | 33205
 TA0003-Persistence | T1136.002-Create account-Domain account | Account renamed to "admin" (or likely) | 4738
