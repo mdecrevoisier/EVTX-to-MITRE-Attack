@@ -92,12 +92,15 @@ TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | Tentative of disablin
 TA0005-Defense Evasion | T1078.002-Valid accounts-Domain accounts | Login from a user member of a "special group" detected (special logon) | 4964
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Network share permissions changed | 5143
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | OCSP security settings changed | 5124 (OCSP)
+TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Sensitive OU permission change | 5136
 TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | Firewall rule created by a suspicious command (netsh.exe, wmiprvse.exe) | 2004
 TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | Firewall rule created by a user account | 2004
+TA0005-Defense Evasion | T1564.006-Hide Artifacts: Run Virtual Instance  | WSL for Windows installation detected | 4688
 TA0006-Credential Access | T1003.003-OS Credential-Dumping NTDS | Command execution related to a suspicious DSRM activity detected | 4688
 TA0006-Credential Access | T1003.003-OS Credential-Dumping NTDS | DSRM (Directory Service Restore Mode) password reset on one or many DCs | 4794
+TA0006-Credential Access | T1003.006-DCSync | Host attempting to dump Active Directory credentials (Impack SecretDump / DCSync) | 5145 / 4624
 TA0006-Credential Access | T1003.006-DCSync | Member added to a sensitive Exchange security group to perform DCsync attack | 4756
-TA0006-Credential Access | T1003.006-DCSync | Sensitive GUID related to "Replicate directory changes" detected  | 4662
+TA0006-Credential Access | T1003.006-DCSync | Sensitive GUID related to "Replicate directory changes" detected  (SecretDump / Dcsync) | 4662
 TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single source because of authentication restrictions (Kerberos/mixed) | 33205
 TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single source with a disabled account | 33205
 TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single source with different non existing accounts | 33205
