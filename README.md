@@ -48,7 +48,8 @@ TA0003-Persistence | T1098.xxx-Account Manipulation  | Member added and removed 
 TA0003-Persistence | T1098.xxx-Account Manipulation  | Member added to a built-in or custom security domain group | 4728/29,4756/57
 TA0003-Persistence | T1098.xxx-Account Manipulation  | Member added to a local group by a user account | 4732/4733
 TA0003-Persistence | T1098.xxx-Account Manipulation  | User performing massive group membership changes on multiple differents groups | 4728/29,4756/57
-TA0003-Persistence | T1098.xxx-Account manipulation | Computer account set with new SPN | 4742
+TA0003-Persistence | T1098.xxx-Account manipulation | Acitve Directory object owner object changed | 5136
+TA0003-Persistence | T1098.xxx-Account manipulation | Computer account set with new SPN | 4742/5136
 TA0003-Persistence | T1098.xxx-Account manipulation | Member added to a built-in Exchange security group | 4756
 TA0003-Persistence | T1098.xxx-Account Manipulation | Member added to a group by the same account | 4728/29,4756/57,4732/33
 TA0003-Persistence | T1098.xxx-Account manipulation | New administrator account created (contains "admin" or likely) | 4720
@@ -58,7 +59,7 @@ TA0003-Persistence | T1098.xxx-Account manipulation | User account created and/o
 TA0003-Persistence | T1098.xxx-Account manipulation | User account marked as "sensitive and cannot be delegated" its had protection removed | 4738
 TA0003-Persistence | T1098.xxx-Account manipulation | User account set to not require Kerberos pre-authentication | 4738
 TA0003-Persistence | T1098.xxx-Account manipulation | User account set to use Kerberos DES encryption | 4738
-TA0003-Persistence | T1098.xxx-Account manipulation | User account set with new SPN | 4738/5136
+TA0003-Persistence | T1098.xxx-Account manipulation | User account set with new SPN | 5136
 TA0003-Persistence | T1098.xxx-Account manipulation | User account with password set to never expire detected | 4738
 TA0003-Persistence | T1098.xxx-Account manipulation | User account with password set to not require detected | 4738
 TA0003-Persistence | T1136.001-Create account-Local account | Disbaed Guest (and support_388945a0) accounts enabled | 4722
@@ -73,9 +74,11 @@ TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL Server: started in s
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Attempt to create a service detected (sc) | 4688
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Mimikatz service driver installation detected (mimidrv.sys) | 7045
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | New service installation by a user account detected | 7045
+TA0003-Persistence | T1546-Event Triggered Execution | AdminSDHolder container permissions modified | 5136
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | New access rights granted to an account by a standard user | 4717
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | Sensitive user rights granted to an account by the system account | 4704
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | User right granted to an account by a standard user | 4704
+TA0004-Privilege Escalation | T1484.001-Domain Policy Modification-Group Policy Modification | Sensitive GPO modified | 5136
 TA0005-Defense Evasion | T1070.001-Indicator Removal on Host | Event log file(s) cleared | 104 / 1102
 TA0005-Defense Evasion | T1070.001-Indicator Removal on Host | Tentative of clearing event log file(s) detected | 4688
 TA0005-Defense Evasion | T1070.001-Indicator Removal on Host | Tentative of clearing event log file(s) detected | 600 / 800
@@ -92,14 +95,20 @@ TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | SQL Server: Database 
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | System audit policy disabled on one or multiple hosts | 4719
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | Tentative of disabling audit policy detected | 4688
 TA0005-Defense Evasion | T1078.002-Valid accounts-Domain accounts | Login from a user member of a "special group" detected (special logon) | 4964
+TA0005-Defense Evasion | T1197-BITS job | BITS command execution followed by suspicious network activities | 4688 > 59/61
+TA0005-Defense Evasion | T1197-BITS job | Command execution related to a suspicious BITS activity detected | 4688
+TA0005-Defense Evasion | T1197-BITS job | Command execution related to a suspicious BITS activity detected | 800/4103/4104
+TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Computer account modifying permissions in AD | 5136
+TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | GPO object permissions changed | 5136
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Network share permissions changed | 5143
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | OCSP security settings changed | 5124 (OCSP)
-TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Sensitive OU permission change | 5136
+TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | Any/any firewall rule created | 2004
 TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | Firewall rule created by a suspicious command (netsh.exe, wmiprvse.exe) | 2004
 TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | Firewall rule created by a user account | 2004
 TA0005-Defense Evasion | T1564.006-Hide Artifacts: Run Virtual Instance  | WSL for Windows installation detected | 4688
 TA0006-Credential Access | T1003.003-OS Credential-Dumping NTDS | Command execution related to a suspicious DSRM activity detected | 4688
 TA0006-Credential Access | T1003.003-OS Credential-Dumping NTDS | DSRM (Directory Service Restore Mode) password reset on one or many DCs | 4794
+TA0006-Credential Access | T1003.006-DCSync | Computer account modifying permissions on top AD root  | 5136
 TA0006-Credential Access | T1003.006-DCSync | Host attempting to dump Active Directory credentials (Impack SecretDump / DCSync) | 5145 / 4624
 TA0006-Credential Access | T1003.006-DCSync | Member added to a sensitive Exchange security group to perform DCsync attack | 4756
 TA0006-Credential Access | T1003.006-DCSync | Sensitive GUID related to "Replicate directory changes" detected  (SecretDump / Dcsync) | 4662
@@ -118,3 +127,4 @@ TA0007-Discovery | T1087-Account discovery | Command execution related to Kerber
 TA0008-Lateral Movement | T1021.001-Remote Desktop Protocol | Denied RDP authentication with valid credentials | 4825
 TA0008-Lateral Movement | T1021.002 -SMB Windows Admin Shares | Host performing access to ADMIN$ share | 5140/5145
 TA0008-Lateral Movement | T1021.002 -SMB Windows Admin Shares | New file share created on a host | 5142
+TA0010-Exfiltration | T1048-Exfiltration Over Alternative Protocol  | High amount of data downloaded or exfiltrated over BITS | 60
