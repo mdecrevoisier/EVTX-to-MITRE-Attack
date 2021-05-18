@@ -17,7 +17,7 @@ IOCs are provided in the EVTX format, the standard format established by Microso
 * Active Directory Certification Services (ADCS / PKI) with online responder (OCSP)
 * SQL Server 2014
 * Windows Defender
-* SYSMON v11 -- *in progress*
+* SYSMON
 * Exchange 2013 -- *planned*
 * Internet Information Services (IIS web server) -- *planned*
 
@@ -83,6 +83,7 @@ TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service |
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Mimikatz service driver installation detected (mimidrv.sys) | 4697/7045
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | MSF payload deployed via service | 4697/7045
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | New service installation by a user account detected | 7045
+TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service created for RDP session hijack | 7045 / 4697
 TA0003-Persistence | T1546-Event Triggered Execution | AdminSDHolder container permissions modified | 5136
 TA0003-Persistence | T1546-Event Triggered Execution | localizationDisplayId attribute abuse for backdoor introduction | 5136
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | New access rights granted to an account by a standard user | 4717
@@ -112,7 +113,7 @@ TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | SQL Server: Database 
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | System audit policy disabled on one or multiple hosts | 4719
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | Tentative of disabling audit policy detected | 4688
 TA0005-Defense Evasion | T1078.002-Valid accounts-Domain accounts | Login from a user member of a "special group" detected (special logon) | 4964
-TA0005-Defense Evasion | T1112-Modify registry | Impacket WMIexec stealthy service registration | 13
+TA0005-Defense Evasion | T1112-Modify registry | Impacket SMBexec stealthy service registration | 13
 TA0005-Defense Evasion | T1197-BITS job | BITS command execution followed by suspicious network activities | 4688 > 59/61
 TA0005-Defense Evasion | T1197-BITS job | Command execution related to a suspicious BITS activity detected | 4688
 TA0005-Defense Evasion | T1197-BITS job | Command execution related to a suspicious BITS activity detected | 800/4103/4104
@@ -158,5 +159,7 @@ TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | New file share cr
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Psexec remote execution via SMB | 5145
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Remote service creation over SMB | 5145
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Remote shell execuction via SMB admin share | 5145
+TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | SMB Admin share accessed with Golden ticket | 5140/5145
 TA0008-Lateral Movement | T1021.004-Remote services: SSH | OpenSSH server for Windows activation/configuration detected | 4103/4104
 TA0008-Lateral Movement | T1021.004-Remote services: SSH | OpenSSH server for Windows installation detected | 4103/4104
+TA0008-Lateral Movement | T1563.002-RDP hijacking | RDP session hijack via TSCOn abuse command | 4688
