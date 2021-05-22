@@ -38,6 +38,8 @@ Antivirus | Antivirus | Defender: antivirus not up to date | 1151
 Antivirus | Antivirus | Defender: exception added | 5007
 Antivirus | Antivirus | Defender: massive malware outbreak detected on multiple hosts | 1116
 Antivirus | Antivirus | Defender: massive malwares detected on a single host | 1116
+TA0001-Initial access | T1078.002-Valid accounts-Domain accounts | Login failure from a single source with a disabled account | 33205
+TA0001-Initial access | T1078.002-Valid accounts-Domain accounts | Success login on OpenSSH server | 4624 / 4
 TA0002-Execution | T1047-Windows Management Instrumentation  | Impacket WMIexec process execution | 4688
 TA0002-Execution | T1053.005-Scheduled Task | Persistent scheduled task with SYSTEM privileges creation | 4688
 TA0002-Execution | T1053.005-Scheduled Task | Schedule task created and deleted in a short period of time | 4698-4699
@@ -59,6 +61,7 @@ TA0003-Persistence | T1098.xxx-Account manipulation | Host delegation settings c
 TA0003-Persistence | T1098.xxx-Account manipulation | Host delegation settings changed for potential abuse (Kerberos only) | 4742
 TA0003-Persistence | T1098.xxx-Account manipulation | Member added to a built-in Exchange security group | 4756
 TA0003-Persistence | T1098.xxx-Account Manipulation | Member added to a group by the same account | 4728,4756,4732
+TA0003-Persistence | T1098.xxx-Account manipulation | Member added to DNSadmin group for DLL abuse | 4732
 TA0003-Persistence | T1098.xxx-Account manipulation | New admin (or likely) created by a non administrative account | 4720
 TA0003-Persistence | T1098.xxx-Account manipulation | SQL Server: new member added to a database role | 33205
 TA0003-Persistence | T1098.xxx-Account manipulation | SQL Server: new member added to server role | 33205
@@ -86,6 +89,9 @@ TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service |
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service created for RDP session hijack | 7045 / 4697
 TA0003-Persistence | T1546-Event Triggered Execution | AdminSDHolder container permissions modified | 5136
 TA0003-Persistence | T1546-Event Triggered Execution | localizationDisplayId attribute abuse for backdoor introduction | 5136
+TA0003-Persistence | T1574.002-DLL Side-Loading | DNS DLL "serverlevelplugindll" command execution (+registry set) | 1 / 13
+TA0003-Persistence | T1574.002-DLL Side-Loading | Failed DLL loaded by DNS server | 150
+TA0003-Persistence | T1574.002-DLL Side-Loading | Success DLL loaded by DNS server | 770
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | New access rights granted to an account by a standard user | 4717
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | Sensitive user rights granted to an account by the system account | 4704
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | User right granted to an account by a standard user | 4704
@@ -136,7 +142,8 @@ TA0006-Credential Access | T1003.003-OS Credential-Dumping NTDS | Command execut
 TA0006-Credential Access | T1003.003-OS Credential-Dumping NTDS | DSRM (Directory Service Restore Mode) password reset on one or many DCs | 4794
 TA0006-Credential Access | T1003.006-DCSync | Member added to a sensitive Exchange security group to perform DCsync attack | 4756
 TA0006-Credential Access | T1040-Network sniffing | Windows native sniffing tool Pktmon usage | 4688
-TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single source with a disabled account | 33205
+TA0006-Credential Access | T1110.xxx-Brut force | Brutforce enumeration on Windows OpenSSH server with non existing user | 4625 / 4
+TA0006-Credential Access | T1110.xxx-Brut force | Brutforce on Windows OpenSSH server with valid user | 4625 / 4
 TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single source with different non existing accounts | 33205
 TA0006-Credential Access | T1552.004-Unsecured Credentials-Private Keys | Unknown application accessing certificate private key detected | 70 (CAPI2)
 TA0006-Credential Access | T1555-Credentials from Password Stores | Suspicious Active Directory DPAPI attributes accessed | 4662
@@ -160,6 +167,6 @@ TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Psexec remote exe
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Remote service creation over SMB | 5145
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Remote shell execuction via SMB admin share | 5145
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | SMB Admin share accessed with Golden ticket | 5140/5145
+TA0008-Lateral Movement | T1021.004-Remote services: SSH | OpenSSH native server feature installation | 4103/4104
 TA0008-Lateral Movement | T1021.004-Remote services: SSH | OpenSSH server for Windows activation/configuration detected | 4103/4104
-TA0008-Lateral Movement | T1021.004-Remote services: SSH | OpenSSH server for Windows installation detected | 4103/4104
 TA0008-Lateral Movement | T1563.002-RDP hijacking | RDP session hijack via TSCOn abuse command | 4688
