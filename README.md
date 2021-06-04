@@ -11,14 +11,14 @@
 IOCs are provided in the EVTX format, the standard format established by Microsoft starting Windows Server 2008 and Windows Vista for event logs. Depending on the SIEM solution you utilize, you may need to make your agent (NXLog, Winlogbeat, Splunk UF, ArcSight, WinCollect, Snare, ...) pointing to the EVTX files and send the content to your SIEM in the adequate format.
 
 ## Microsoft log sources used:
-* Windows Server 2012 R2 or higher
-* Windows 10 or higher
+* Windows 10
+* Windows Server 2021 R2 and higher
 * Active Directory Domain Services (ADDS)
 * Active Directory Certification Services (ADCS / PKI) with online responder (OCSP)
 * SQL Server 2014
 * Windows Defender
-* SYSMON
-* Exchange 2013 -- *planned*
+* SYSMON v11 and higher
+* Exchange 2016
 * Internet Information Services (IIS web server) -- *planned*
 
 ## Related and/or connected projects:
@@ -85,6 +85,8 @@ TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL lateral movement wit
 TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL Server xp_cmdshell procedure activated | 18457
 TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL Server: sqlcmd & ossql utilities abuse | 4688
 TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL Server: started in single mode for password recovery | 4688
+TA0003-Persistence | T1505.002-Server Software Component: Transport Agent | Exchange transport agent injection via configuration file | 11
+TA0003-Persistence | T1505.002-Server Software Component: Transport Agent | Exchange transport agent installation artifacts | 1/6
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Attempt to create a service detected (sc) | 4688
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Encoded PowerShell payload deployed via service installation | 4697/7045
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Mimikatz service driver installation detected (mimidrv.sys) | 4697/7045
