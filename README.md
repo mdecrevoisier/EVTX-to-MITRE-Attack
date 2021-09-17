@@ -22,13 +22,13 @@ IOCs are provided in the EVTX format, the standard format established by Microso
 * Internet Information Services (IIS web server) -- *planned*
 
 ## Related and/or connected projects:
-If you are interesting in external projects or articles involving topics like SIGMA, WHIDS, EVTX, ... I would like to suggest the following ones:
-* **EVTX-ATTACK** from @ sbousseaden: https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES
-* **GENE** (*Go Evtx sigNature Engine*) from @qjerome: https://github.com/0xrawsec/gene
-* **Mordor dataset**: https://mordordatasets.com/notebooks/small/windows/windows.html
+If you are interesting in external projects arround SIGMA and EVTX analysis, I would like to suggest the following ones:
+* **EVTX-ATTACK** from @sbousseaden: https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES
+* **OTRF/Security-Datasets (from Mordor project)**: https://github.com/OTRF/Security-Datasets/tree/master/datasets/atomic/windows
 * **Atomic RedTeam**: https://github.com/redcanaryco/atomic-red-team
 * Export EVTX to Elastic with Winlogbeat: https://medium.com/@duzvik/import-evtx-collections-in-to-elastic-989b7f49b4b8 
 * **EvtxToElk**: https://www.dragos.com/blog/industry-news/evtxtoelk-a-python-module-to-load-windows-event-logs-into-elasticsearch/
+* **Zircolite** (SIGMA detection for EVTX): https://github.com/wagga40/Zircolite
 
 ## IOCs content
 
