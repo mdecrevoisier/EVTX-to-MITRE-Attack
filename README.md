@@ -35,21 +35,24 @@ If you are interesting in external projects arround SIGMA and EVTX analysis, I w
 Att@ck Tactic	| Att@ck  Technique	| Description | 	Event IDs   |
 |:-------------------------|:------------------|:-------------------------|:------------------|
 Antivirus | Antivirus | Defender: antivirus not up to date | 1151
-Antivirus | Antivirus | Defender: exception added | 5007
 Antivirus | Antivirus | Defender: massive malware outbreak detected on multiple hosts | 1116
 Antivirus | Antivirus | Defender: massive malwares detected on a single host | 1116
 TA0001-Initial access | T1078.002-Valid accounts-Domain accounts | Login failure from a single source with a disabled account | 33205
 TA0001-Initial access | T1078.002-Valid accounts-Domain accounts | Success login on OpenSSH server | 4624/4
 TA0002-Execution | T1047-Windows Management Instrumentation  | Impacket WMIexec process execution | 4688
+TA0002-Execution | T1053.005-Scheduled Task | Interactive shell triggered by scheduled task (at, deprecated) | 4688
 TA0002-Execution | T1053.005-Scheduled Task | Persistent scheduled task with SYSTEM privileges creation | 4688
+TA0002-Execution | T1053.005-Scheduled Task | Remote schedule task creation via named pipes | 5145
 TA0002-Execution | T1053.005-Scheduled Task | Schedule task created and deleted in a short period of time | 4698-4699
+TA0002-Execution | T1053.005-Scheduled Task | Schedule task created with suspicious arguments | 4698
+TA0002-Execution | T1053.005-Scheduled Task | Schedule task fastly created and deleted | 4698,4699
 TA0002-Execution | T1053.005-Scheduled Task | Scheduled task creation | 4688
 TA0002-Execution | T1059.001-Command and Scripting Interpreter: PowerShell  | Encoded PowerShell payload deployed (PowerShell) | 800/4103/4104
 TA0002-Execution | T1059.001-Command and Scripting Interpreter: PowerShell  | Interactive PipeShell over SMB named pipe | 800/4103/4104
 TA0002-Execution | T1059.003-Windows Command Shell  | Encoded PowerShell payload deployed via process execution | 4688
 TA0002-Execution | T1059.003-Windows Command Shell  | SQL Server payload injectection for reverse shell (MSF) | 4688
 TA0002-Execution | T1569.002-Service Execution  | PSexec installation detected | 4688
-TA0003-Persistence | T1078.002-Valid accounts-Domain accounts | Account renamed to "admin" (or likely) | 4738/4781
+TA0003-Persistence | T1078.002-Valid accounts-Domain accounts | Account renamed to "admin" (or likely) | 4781
 TA0003-Persistence | T1098.xxx-Account Manipulation  | High risk domain group membership change | 4728/4756
 TA0003-Persistence | T1098.xxx-Account Manipulation  | High risk local-domain local group membership change | 4732
 TA0003-Persistence | T1098.xxx-Account Manipulation  | Medium risk local-domain local group membership change | 4732
@@ -81,6 +84,7 @@ TA0003-Persistence | T1136.001-Create account-Local account | SQL Server: disabl
 TA0003-Persistence | T1136.002-Create account-Domain account | Computer account created and deleted in a short period of time | 4741/4743
 TA0003-Persistence | T1136.002-Create account-Domain account | User account created and deleted in a short period of time | 4720/4726
 TA0003-Persistence | T1136.002-Create account-Domain account | User account created to fake a computer account (ends with "$") | 4720
+TA0003-Persistence | T1136-Create account | User creation via commandline | 4688
 TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL lateral movement with CLR | 15457
 TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL Server xp_cmdshell procedure activated | 18457
 TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL Server: sqlcmd & ossql utilities abuse | 4688
@@ -91,6 +95,12 @@ TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service |
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Encoded PowerShell payload deployed via service installation | 4697/7045
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Mimikatz service driver installation detected (mimidrv.sys) | 4697/7045
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | New service installation by a user account detected | 7045
+TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service abuse with backdoored "command failure" (PowerShell) | 800/4103/4104
+TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service abuse with backdoored "command failure" (registry) | 4688/1
+TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service abuse with backdoored "command failure" (service) | 4688/1
+TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service abuse with malicious ImagePath (PowerShell) | 800/4103/4104
+TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service abuse with malicious ImagePath (registry) | 4688/1
+TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service abuse with malicious ImagePath (service) | 4688/1
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service created for RDP session hijack | 7045/4697
 TA0003-Persistence | T1546.003 -Windows Management Instrumentation Event Subscription | WMI registration (PowerShell) | 800,4103,4104
 TA0003-Persistence | T1546.003 -Windows Management Instrumentation Event Subscription | WMI registration | 19,20,21
@@ -98,9 +108,12 @@ TA0003-Persistence | T1546.007-Netsh Helper DLL | Netsh helper DLL command abuse
 TA0003-Persistence | T1546.007-Netsh Helper DLL | Netsh helper DLL registry abuse | 12/13
 TA0003-Persistence | T1546-Event Triggered Execution | AdminSDHolder container permissions modified | 5136
 TA0003-Persistence | T1546-Event Triggered Execution | localizationDisplayId attribute abuse for backdoor introduction | 5136
+TA0003-Persistence | T1547.008-Boot or Logon Autostart Execution: LSASS Driver | win-os-security package (SSP) loaded into LSA (native) | 4622
 TA0003-Persistence | T1574.002-DLL Side-Loading | DNS DLL "serverlevelplugindll" command execution (+registry set) | 1/13
 TA0003-Persistence | T1574.002-DLL Side-Loading | Failed DLL loaded by DNS server | 150
 TA0003-Persistence | T1574.002-DLL Side-Loading | Success DLL loaded by DNS server | 770
+TA0003-Persistence | T1574.010-Hijack execution flow: service file permissions weakness | Service permissions modified (registry) | 4688
+TA0003-Persistence | T1574.010-Hijack execution flow: service file permissions weakness | Service permissions modified (service) | 4688
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | New access rights granted to an account by a standard user | 4717
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | Sensitive user rights granted to an account by the system account | 4704
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | User right granted to an account by a standard user | 4704
@@ -115,9 +128,9 @@ TA0004-Privilege Escalation | T1546.008-Event Triggered Execution: Accessibility
 TA0004-Privilege Escalation | T1547.010-Port Monitors  | Print spooler privilege escalation via printer added (CVE-2020-1048) | 800/4103/4104
 TA0005-Defense Evasion | T1070.001-Indicator Removal on Host | Event log file(s) cleared | 104/1102
 TA0005-Defense Evasion | T1070.001-Indicator Removal on Host | Tentative of clearing event log file(s) detected | 4688
-TA0005-Defense Evasion | T1070.001-Indicator Removal on Host | Tentative of clearing event log file(s) detected | 600/800
 TA0005-Defense Evasion | T1070.006-Timestomp | System time changed by a standard user | 4616
 TA0005-Defense Evasion | T1070.006-Timestomp | System time changed by a suspicious application | 4616
+TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | Audit policy disabled (burst) on a host | 4719
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | Domain policy changed on one or multiple hosts | 4739
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | Membership of a special group updated | 4908
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | SQL Server: Audit object deleted | 33205
@@ -126,19 +139,24 @@ TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | SQL Server: Audit spe
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | SQL Server: Audit specifications disabled | 33205
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | SQL Server: Database audit specifications deleted | 33205
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | SQL Server: Database audit specifications disabled | 33205
-TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | System audit policy disabled on one or multiple hosts | 4719
-TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | Tentative of disabling audit policy detected | 4688
+TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | Tentative of disabling or clearing audit policy by commandline | 4688
 TA0005-Defense Evasion | T1078.002-Valid accounts-Domain accounts | Login from a user member of a "special group" detected (special logon) | 4964
 TA0005-Defense Evasion | T1112-Modify registry | Impacket SMBexec stealthy service registration | 13
 TA0005-Defense Evasion | T1197-BITS job | BITS command execution followed by suspicious network activities | 4688>59/61
 TA0005-Defense Evasion | T1197-BITS job | Command execution related to a suspicious BITS activity detected | 4688
 TA0005-Defense Evasion | T1197-BITS job | Command execution related to a suspicious BITS activity detected | 800/4103/4104
+TA0005-Defense Evasion | T1207-Rogue domain controller | Fake domain controller registered | 5137
 TA0005-Defense Evasion | T1207-Rogue domain controller | Sensitive attributes accessed (DCshadow) | 4662
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Computer account modifying AD permissions (PrivExchange) | 5136
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Network share permissions changed | 5143
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | OCSP security settings changed | 5124(OCSP)
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Permissions changed on a GPO | 5136
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Sensitive GUID related to "Replicate directory changes" detected  | 4662
+TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: critical security component disabled (command) | 4688/1
+TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: critical security component disabled (PowerShell) | 800/4103/4104
+TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: default action set to allow any threat (PowerShell) | 800/4103/4104
+TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: exclusion added (native) | 5007
+TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: exclusion added (PowerShell) | 800/4103/4104
 TA0005-Defense Evasion | T1562.004-Disable or Modify System Firewall  | Firewall deactivation (cmd) | 4688
 TA0005-Defense Evasion | T1562.004-Disable or Modify System Firewall  | Firewall deactivation (firewall) | 2003/4950
 TA0005-Defense Evasion | T1562.004-Disable or Modify System Firewall  | Firewall deactivation (PowerShell) | 800/4103/4104
@@ -175,14 +193,20 @@ TA0007-Discovery | T1016-System Network Configuration Discovery  | Tentative of 
 TA0007-Discovery | T1069.001-Discovery local groups | Remote local administrator group enumerated via SharpHound | 4799
 TA0007-Discovery | T1069.002-Discovery domain groups | Massive SAM domain users & groups discovery | 4661
 TA0007-Discovery | T1069.002-Discovery domain groups | Sensitive SAM domain user & groups discovery | 4661
+TA0007-Discovery | T1069-Permission Groups Discovery  | Group discovery via commandline | 4688
 TA0007-Discovery | T1087.002-Domain Account discovery | Honeypot object (container, computer, group, user) enumerated | 4662/4624
 TA0007-Discovery | T1087.002-Domain Account discovery | Single source performing host enumeration over Kerberos ticket (TGS) detected | 4769
 TA0007-Discovery | T1087-Account discovery | Command execution related to Kerberos SPN enumeration activity detected | 4688/1
 TA0007-Discovery | T1087-Account discovery | Command execution related to Kerberos SPN enumeration activity detected | 800/4103/4104
-TA0007-Discovery | T1135.xxx-Network Share Discovery | Host performing advanced named pipes enumeration on different hosts via SMB | 5145
+TA0007-Discovery | T1087-Account discovery | User enumeration via commandline | 4688
+TA0007-Discovery | T1135-Network Share Discovery | Host performing advanced named pipes enumeration on different hosts via SMB | 5145
+TA0007-Discovery | T1135-Network Share Discovery | Network share discovery and/or connection via commandline | 4688
+TA0007-Discovery | T1135-Network Share Discovery | Network share manipulation via commandline | 4688
+TA0007-Discovery | T1201-Password Policy Discovery | Password policy discovery via commandline | 4688
 TA0008-Lateral Movement | T1021.001-Remote Desktop Protocol | Denied RDP authentication with valid credentials | 4825
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Admin share accessed via SMB (basic) | 5140/5145
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Impacket WMIexec execution via SMB admin share | 5145
+TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Multiple failed attempt to ADMIN$ share | 5140/5145
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | New file share created on a host | 5142
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Psexec remote execution via SMB | 5145
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Remote service creation over SMB | 5145
