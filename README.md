@@ -2,7 +2,7 @@
 
 ## Project purpose
 **EVTX to MITRE Att@ck** is a *Security Information Management System* orientated project. It provides Windows IOCs indicators classified per Tactic and Technique in order to address different security scenarios with your SIEM:
-* Measure your security coverage 
+* Measure your security coverage
 * Enhance your detection capacities
 * Identify security gaps or uncovered threats
 * Design new use cases
@@ -91,7 +91,6 @@ TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL Server: sqlcmd & oss
 TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL Server: started in single mode for password recovery | 4688
 TA0003-Persistence | T1505.002-Server Software Component: Transport Agent | Exchange transport agent injection via configuration file | 11
 TA0003-Persistence | T1505.002-Server Software Component: Transport Agent | Exchange transport agent installation artifacts | 1/6
-TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Attempt to create a service detected (sc) | 4688
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Encoded PowerShell payload deployed via service installation | 4697/7045
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Mimikatz service driver installation detected (mimidrv.sys) | 4697/7045
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | New service installation by a user account detected | 7045
@@ -102,6 +101,8 @@ TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service |
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service abuse with malicious ImagePath (registry) | 4688/1
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service abuse with malicious ImagePath (service) | 4688/1
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service created for RDP session hijack | 7045/4697
+TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service creation (command) | 4688
+TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service creation (PowerShell) | 800/4103/4104
 TA0003-Persistence | T1546.003 -Windows Management Instrumentation Event Subscription | WMI registration (PowerShell) | 800,4103,4104
 TA0003-Persistence | T1546.003 -Windows Management Instrumentation Event Subscription | WMI registration | 19,20,21
 TA0003-Persistence | T1546.007-Netsh Helper DLL | Netsh helper DLL command abuse | 4688
@@ -115,7 +116,6 @@ TA0003-Persistence | T1574.002-DLL Side-Loading | Success DLL loaded by DNS serv
 TA0003-Persistence | T1574.010-Hijack execution flow: service file permissions weakness | Service permissions modified (registry) | 4688
 TA0003-Persistence | T1574.010-Hijack execution flow: service file permissions weakness | Service permissions modified (service) | 4688
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | New access rights granted to an account by a standard user | 4717
-TA0004-Privilege Escalation | T1134-Access Token Manipulation | Sensitive user rights granted to an account by the system account | 4704
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | User right granted to an account by a standard user | 4704
 TA0004-Privilege Escalation | T1484.001-Domain Policy Modification-Group Policy Modification | Modification of a sensitive Group Policy  | 5136
 TA0004-Privilege Escalation | T1543.003-Create or Modify System Process-Windows Service | PSexec service installation detected | 4697/7045
@@ -128,9 +128,10 @@ TA0004-Privilege Escalation | T1546.008-Event Triggered Execution: Accessibility
 TA0004-Privilege Escalation | T1547.010-Port Monitors  | Print spooler privilege escalation via printer added (CVE-2020-1048) | 800/4103/4104
 TA0005-Defense Evasion | T1070.001-Indicator Removal on Host | Event log file(s) cleared | 104/1102
 TA0005-Defense Evasion | T1070.001-Indicator Removal on Host | Tentative of clearing event log file(s) detected | 4688
+TA0005-Defense Evasion | T1070.001-Indicator Removal on Host | Tentative of clearing event log file(s) detected | 800/4103/4104
 TA0005-Defense Evasion | T1070.006-Timestomp | System time changed by a standard user | 4616
 TA0005-Defense Evasion | T1070.006-Timestomp | System time changed by a suspicious application | 4616
-TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | Audit policy disabled (burst) on a host | 4719
+TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | Audit policy disabled | 4719
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | Domain policy changed on one or multiple hosts | 4739
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | Membership of a special group updated | 4908
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | SQL Server: Audit object deleted | 33205
@@ -142,10 +143,9 @@ TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | SQL Server: Database 
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | Tentative of disabling or clearing audit policy by commandline | 4688
 TA0005-Defense Evasion | T1078.002-Valid accounts-Domain accounts | Login from a user member of a "special group" detected (special logon) | 4964
 TA0005-Defense Evasion | T1112-Modify registry | Impacket SMBexec stealthy service registration | 13
-TA0005-Defense Evasion | T1197-BITS job | BITS command execution followed by suspicious network activities | 4688>59/61
 TA0005-Defense Evasion | T1197-BITS job | Command execution related to a suspicious BITS activity detected | 4688
 TA0005-Defense Evasion | T1197-BITS job | Command execution related to a suspicious BITS activity detected | 800/4103/4104
-TA0005-Defense Evasion | T1207-Rogue domain controller | Fake domain controller registered | 5137
+TA0005-Defense Evasion | T1197-BITS job | High amount of data downloaded via BITS | 60
 TA0005-Defense Evasion | T1207-Rogue domain controller | Sensitive attributes accessed (DCshadow) | 4662
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Computer account modifying AD permissions (PrivExchange) | 5136
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Network share permissions changed | 5143
@@ -170,12 +170,17 @@ TA0005-Defense Evasion | T1564.006-Hide Artifacts: Run Virtual Instance  | WSL f
 TA0006-Credential Access | 1558.004-Steal or Forge Kerberos Tickets: AS-REP Roasting | erberoas AS-REP Roasting ticket request detected | 4768
 TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS process accessed by a non system account | 4656/4663
 TA0006-Credential Access | T1003.001-Credential dumping: LSASS | SAM database user credential dump with Mimikatz | 4661
+TA0006-Credential Access | T1003.001-Credential dumping: LSASS | win-os-LSASS credential dump with LSASSY (kernel) | 4656/4663
+TA0006-Credential Access | T1003.001-Credential dumping: LSASS | win-os-LSASS credential dump with LSASSY (PowerShell) | 800/4103/4104
+TA0006-Credential Access | T1003.001-Credential dumping: LSASS | win-os-LSASS credential dump with LSASSY (process) | 4688/1
+TA0006-Credential Access | T1003.001-Credential dumping: LSASS | win-os-LSASS credential dump with LSASSY (share) | 5145
 TA0006-Credential Access | T1003.002-Security Account Manager | SAM database access during DCshadow | 4661
 TA0006-Credential Access | T1003.002-Security Account Manager | Secretdump password dump over SMB ADMIN$ | 5145
 TA0006-Credential Access | T1003.003-NTDS | IFM created | 325/327
 TA0006-Credential Access | T1003.003-NTDS | IFM created from command line | 4688
-TA0006-Credential Access | T1003.003-OS Credential-Dumping NTDS | Command execution related to a suspicious DSRM activity detected | 4688
-TA0006-Credential Access | T1003.003-OS Credential-Dumping NTDS | DSRM (Directory Service Restore Mode) password reset on one or many DCs | 4794
+TA0006-Credential Access | T1003.003-OS Credential-Dumping NTDS | DSRM configuration changed (Reg via command) | 4688
+TA0006-Credential Access | T1003.003-OS Credential-Dumping NTDS | DSRM configuration changed (Reg via PowerShell) | 800/4103/4104
+TA0006-Credential Access | T1003.003-OS Credential-Dumping NTDS | DSRM password reset | 4794
 TA0006-Credential Access | T1003.006-DCSync | Member added to a sensitive Exchange security group to perform DCsync attack | 4756
 TA0006-Credential Access | T1003-Credential dumping | Diskshadow abuse | 4688
 TA0006-Credential Access | T1040-Network sniffing | Windows native sniffing tool Pktmon usage | 4688
@@ -189,11 +194,14 @@ TA0006-Credential Access | T1558.001-Golden Ticket  | Kerberos TGS ticket reques
 TA0006-Credential Access | T1558.001-Golden Ticket  | SMB Admin share accessed with a forged Golden ticket | 5140/5145
 TA0006-Credential Access | T1558.001-Golden Ticket  | Success login impersonation with forged Golden ticket | 4624
 TA0006-Credential Access | T1558.003-Kerberoasting  | KerberOAST ticket (TGS) request detected (low encryption) | 4769
+TA0007-Discovery | T1016-System Network Configuration Discovery  | Firewall configuration enumerated (command) | 4688
+TA0007-Discovery | T1016-System Network Configuration Discovery  | Firewall configuration enumerated (PowerShell) | 800/4103/4104
 TA0007-Discovery | T1016-System Network Configuration Discovery  | Tentative of zone transfer from a non DNS server detected | 6004(DNSserver)
 TA0007-Discovery | T1069.001-Discovery local groups | Remote local administrator group enumerated via SharpHound | 4799
 TA0007-Discovery | T1069.002-Discovery domain groups | Massive SAM domain users & groups discovery | 4661
 TA0007-Discovery | T1069.002-Discovery domain groups | Sensitive SAM domain user & groups discovery | 4661
 TA0007-Discovery | T1069-Permission Groups Discovery  | Group discovery via commandline | 4688
+TA0007-Discovery | T1082-System Information Discovery | Audit policy settings collection | 4688
 TA0007-Discovery | T1087.002-Domain Account discovery | Honeypot object (container, computer, group, user) enumerated | 4662/4624
 TA0007-Discovery | T1087.002-Domain Account discovery | Single source performing host enumeration over Kerberos ticket (TGS) detected | 4769
 TA0007-Discovery | T1087-Account discovery | Command execution related to Kerberos SPN enumeration activity detected | 4688/1
@@ -206,7 +214,6 @@ TA0007-Discovery | T1201-Password Policy Discovery | Password policy discovery v
 TA0008-Lateral Movement | T1021.001-Remote Desktop Protocol | Denied RDP authentication with valid credentials | 4825
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Admin share accessed via SMB (basic) | 5140/5145
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Impacket WMIexec execution via SMB admin share | 5145
-TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Multiple failed attempt to ADMIN$ share | 5140/5145
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | New file share created on a host | 5142
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Psexec remote execution via SMB | 5145
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Remote service creation over SMB | 5145
