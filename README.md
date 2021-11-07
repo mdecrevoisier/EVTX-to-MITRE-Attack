@@ -1,7 +1,7 @@
 # EVTX to MITRE Att@ck
 
 ## Project purpose
-**EVTX to MITRE Att@ck** is a *Security Information Management System* orientated project. It provides Windows IOCs indicators classified per Tactic and Technique in order to address different security scenarios with your SIEM:
+**EVTX to MITRE Att@ck** is a *Security Information Management System* orientated project. It provides >200 Windows IOCs indicators classified per Tactic and Technique in order to address different security scenarios with your SIEM:
 * Measure your security coverage
 * Enhance your detection capacities
 * Identify security gaps or uncovered threats
@@ -26,7 +26,7 @@ If you are interesting in external projects arround SIGMA and EVTX analysis, I w
 * **EVTX-ATTACK** from @sbousseaden: https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES
 * **OTRF/Security-Datasets (from Mordor project)**: https://github.com/OTRF/Security-Datasets/tree/master/datasets/atomic/windows
 * **Atomic RedTeam**: https://github.com/redcanaryco/atomic-red-team
-* Export EVTX to Elastic with Winlogbeat: https://medium.com/@duzvik/import-evtx-collections-in-to-elastic-989b7f49b4b8 
+* Export EVTX to Elastic with Winlogbeat: https://medium.com/@duzvik/import-evtx-collections-in-to-elastic-989b7f49b4b8
 * **EvtxToElk**: https://www.dragos.com/blog/industry-news/evtxtoelk-a-python-module-to-load-windows-event-logs-into-elasticsearch/
 * **Zircolite** (SIGMA detection for EVTX): https://github.com/wagga40/Zircolite
 
