@@ -106,6 +106,7 @@ TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service |
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service created for RDP session hijack | 7045/4697
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service creation (command) | 4688
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service creation (PowerShell) | 800/4103/4104
+TA0003-Persistence | T1546.003 -Windows Management Instrumentation Event Subscription | System crash behavior manipulation - WMImplant (registry) | 13
 TA0003-Persistence | T1546.003 -Windows Management Instrumentation Event Subscription | WMI registration (PowerShell) | 800,4103,4104
 TA0003-Persistence | T1546.003 -Windows Management Instrumentation Event Subscription | WMI registration | 19,20,21
 TA0003-Persistence | T1546.007-Netsh Helper DLL | Netsh helper DLL command abuse | 4688
@@ -135,8 +136,7 @@ TA0005-Defense Evasion | T1027-Obfuscated Files or Information | Payload obfusca
 TA0005-Defense Evasion | T1070.001-Indicator Removal on Host | Event log file(s) cleared | 104/1102
 TA0005-Defense Evasion | T1070.001-Indicator Removal on Host | Tentative of clearing event log file(s) detected | 4688
 TA0005-Defense Evasion | T1070.001-Indicator Removal on Host | Tentative of clearing event log file(s) detected | 800/4103/4104
-TA0005-Defense Evasion | T1070.006-Timestomp | System time changed by a standard user | 4616
-TA0005-Defense Evasion | T1070.006-Timestomp | System time changed by a suspicious application | 4616
+TA0005-Defense Evasion | T1070.006-Timestomp | System time changed | 4616
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | Audit policy disabled | 4719
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | Domain policy changed on one or multiple hosts | 4739
 TA0005-Defense Evasion | T1070.xxx-Audit policy disabled | Membership of a special group updated | 4908
@@ -196,7 +196,7 @@ TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single so
 TA0006-Credential Access | T1552.004-Unsecured Credentials-Private Keys | Unknown application accessing certificate private key detected | 70(CAPI2)
 TA0006-Credential Access | T1555-Credentials from Password Stores | Suspicious Active Directory DPAPI attributes accessed | 4662
 TA0006-Credential Access | T1557.001-MiM:LLMNR/NBT-NS Poisoning and SMB Relay  | Discovery for print spooler bug abuse via named pipe | 5145
-TA0006-Credential Access | T1558.001-Golden Ticket  | Kerberos TGS ticket request related to a potential Golden ticket (lowercase) | 4769
+TA0006-Credential Access | T1558.001-Golden Ticket  | Kerberos TGS ticket request related to a potential Golden ticket | 4769
 TA0006-Credential Access | T1558.001-Golden Ticket  | SMB Admin share accessed with a forged Golden ticket | 5140/5145
 TA0006-Credential Access | T1558.001-Golden Ticket  | Success login impersonation with forged Golden ticket | 4624
 TA0006-Credential Access | T1558.003-Kerberoasting  | KerberOAST ticket (TGS) request detected (low encryption) | 4769
@@ -209,7 +209,7 @@ TA0007-Discovery | T1069.002-Discovery domain groups | Sensitive SAM domain user
 TA0007-Discovery | T1069-Permission Groups Discovery  | Group discovery via commandline | 4688
 TA0007-Discovery | T1069-Permission Groups Discovery  | Group discovery via PowerShell | 800/4103/4104
 TA0007-Discovery | T1082-System Information Discovery | Audit policy settings collection | 4688
-TA0007-Discovery | T1087.002-Domain Account discovery | Honeypot object (container, computer, group, user) enumerated | 4662/4624
+TA0007-Discovery | T1087.002-Domain Account discovery | Honeypot object (container, computer, group, user) enumerated | 4662
 TA0007-Discovery | T1087.002-Domain Account discovery | Single source performing host enumeration over Kerberos ticket (TGS) detected | 4769
 TA0007-Discovery | T1087-Account discovery | Command execution related to Kerberos SPN enumeration activity detected | 4688/1
 TA0007-Discovery | T1087-Account discovery | Command execution related to Kerberos SPN enumeration activity detected | 800/4103/4104
@@ -221,6 +221,7 @@ TA0007-Discovery | T1201-Password Policy Discovery | Password policy discovery v
 TA0008-Lateral Movement | T1021.001-Remote Desktop Protocol | Denied RDP authentication with valid credentials | 4825
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Admin share accessed via SMB (basic) | 5140/5145
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Impacket WMIexec execution via SMB admin share | 5145
+TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Lateral movement by mounting a network share - net use (command) | 4688/4648
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | New file share created on a host | 5142
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Psexec remote execution via SMB | 5145
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Remote service creation over SMB | 5145
@@ -232,4 +233,6 @@ TA0008-Lateral Movement | T1021.003-DCOM | DCOMexec process abuse via MMC | 4688
 TA0008-Lateral Movement | T1021.004-Remote services: SSH | OpenSSH native server feature installation | 800/4103/4104
 TA0008-Lateral Movement | T1021.004-Remote services: SSH | OpenSSH server for Windows activation/configuration detected | 800/4103/4104
 TA0008-Lateral Movement | T1563.002-RDP hijacking | RDP session hijack via TSCON abuse command | 4688
+TA0008-Lateral Movement | Tt1550.002-Use Alternate Authentication Material: Pass the Hash | Mimikatz Pass-the-hash login | 4624
+TA0008-Lateral Movement | Tt1550.002-Use Alternate Authentication Material: Pass the Hash | Mimikatz Pass-the-hash LSASS process accessed | 10
 TA0011-Command and control | T1090-Proxy | Netsh port forwarding abuse via proxy | 4688
