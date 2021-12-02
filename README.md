@@ -63,8 +63,6 @@ TA0003-Persistence | T1098.xxx-Account Manipulation  | Medium risk local-domain 
 TA0003-Persistence | T1098.xxx-Account Manipulation  | Member added and removed from a group by a user account in a short period of time  | 4728/29,4756/57,4732/33
 TA0003-Persistence | T1098.xxx-Account Manipulation  | Member added to a local group by a user account | 4732
 TA0003-Persistence | T1098.xxx-Account Manipulation  | User performing massive group membership changes on multiple differents groups | 4728,4756
-TA0003-Persistence | T1098.xxx-Account manipulation | Computer account set with new SPN | 4742
-TA0003-Persistence | T1098.xxx-Account manipulation | Fake domain controller set with new SPN (DCshadow) | 4742
 TA0003-Persistence | T1098.xxx-Account manipulation | Host delegation settings changed for potential abuse (any protocol) | 4742
 TA0003-Persistence | T1098.xxx-Account manipulation | Host delegation settings changed for potential abuse (any service, Kerberos only) | 4742
 TA0003-Persistence | T1098.xxx-Account manipulation | Host delegation settings changed for potential abuse (Kerberos only) | 4742
@@ -72,16 +70,19 @@ TA0003-Persistence | T1098.xxx-Account manipulation | Member added to a built-in
 TA0003-Persistence | T1098.xxx-Account Manipulation | Member added to a group by the same account | 4728,4756,4732
 TA0003-Persistence | T1098.xxx-Account manipulation | Member added to DNSadmin group for DLL abuse | 4732
 TA0003-Persistence | T1098.xxx-Account manipulation | New admin (or likely) created by a non administrative account | 4720
+TA0003-Persistence | T1098.xxx-Account manipulation | SPN modification of a computer account (DCshadow) (Directory Services) | 5136
+TA0003-Persistence | T1098.xxx-Account manipulation | SPN modification of a computer account (DCshadow) | 4742
+TA0003-Persistence | T1098.xxx-Account manipulation | SPN modification of a computer account | 4742
+TA0003-Persistence | T1098.xxx-Account manipulation | SPN modification of a user account (Kerberoasting) | 5136
 TA0003-Persistence | T1098.xxx-Account manipulation | SQL Server: new member added to a database role | 33205
 TA0003-Persistence | T1098.xxx-Account manipulation | SQL Server: new member added to server role | 33205
 TA0003-Persistence | T1098.xxx-Account manipulation | User account created and/or set with reversible encryption detected | 4738
 TA0003-Persistence | T1098.xxx-Account manipulation | User account marked as "sensitive and cannot be delegated" its had protection removed | 4738
 TA0003-Persistence | T1098.xxx-Account manipulation | User account set to not require Kerberos pre-authentication | 4738
 TA0003-Persistence | T1098.xxx-Account manipulation | User account set to use Kerberos DES encryption | 4738
-TA0003-Persistence | T1098.xxx-Account manipulation | User account set with new SPN | 5136
 TA0003-Persistence | T1098.xxx-Account manipulation | User account with password set to never expire detected | 4738
 TA0003-Persistence | T1098.xxx-Account manipulation | User account with password set to not require detected | 4738
-TA0003-Persistence | T1098-Account Manipulation | SPN added to an account by command line | 4688/1
+TA0003-Persistence | T1098-Account Manipulation | SPN added to an account (command) | 4688/1
 TA0003-Persistence | T1136.001-Create account-Local account | Disbled Guest (and support_388945a0) accounts enabled | 4722
 TA0003-Persistence | T1136.001-Create account-Local account | Local user account created on a single host | 4720
 TA0003-Persistence | T1136.001-Create account-Local account | SQL Server: disabled SA account enabled | 33205
@@ -119,6 +120,7 @@ TA0003-Persistence | T1574.002-DLL Side-Loading | Failed DLL loaded by DNS serve
 TA0003-Persistence | T1574.002-DLL Side-Loading | Success DLL loaded by DNS server | 770
 TA0003-Persistence | T1574.010-Hijack execution flow: service file permissions weakness | Service permissions modified (registry) | 4688
 TA0003-Persistence | T1574.010-Hijack execution flow: service file permissions weakness | Service permissions modified (service) | 4688
+TA0004-Privilege Escalation | T1134.002- Access Token Manipulation: Create Process with Token  | Privilege escalation via runas (command) | 4688/4648/4624
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | New access rights granted to an account by a standard user | 4717
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | User right granted to an account by a standard user | 4704
 TA0004-Privilege Escalation | T1484.001-Domain Policy Modification-Group Policy Modification | Modification of a sensitive Group Policy  | 5136
@@ -152,6 +154,7 @@ TA0005-Defense Evasion | T1112-Modify registry | Impacket SMBexec stealthy servi
 TA0005-Defense Evasion | T1197-BITS job | Command execution related to a suspicious BITS activity detected | 4688
 TA0005-Defense Evasion | T1197-BITS job | Command execution related to a suspicious BITS activity detected | 800/4103/4104
 TA0005-Defense Evasion | T1197-BITS job | High amount of data downloaded via BITS | 60
+TA0005-Defense Evasion | T1207-Rogue domain controller | New fake domain controller registration (DCshadow) | 5137 / 5141
 TA0005-Defense Evasion | T1207-Rogue domain controller | Sensitive attributes accessed (DCshadow) | 4662
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Computer account modifying AD permissions (PrivExchange) | 5136
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Network share permissions changed | 5143
@@ -192,6 +195,7 @@ TA0006-Credential Access | T1003-Credential dumping | Diskshadow abuse | 4688
 TA0006-Credential Access | T1040-Network sniffing | Windows native sniffing tool Pktmon usage | 4688
 TA0006-Credential Access | T1110.xxx-Brut force | Brutforce enumeration on Windows OpenSSH server with non existing user | 4625/4
 TA0006-Credential Access | T1110.xxx-Brut force | Brutforce on Windows OpenSSH server with valid user | 4625/4
+TA0006-Credential Access | T1110.xxx-Brut force | Kerberos brutforce with not existing users | 4768/4771
 TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single source with different non existing accounts | 33205
 TA0006-Credential Access | T1552.004-Unsecured Credentials-Private Keys | Unknown application accessing certificate private key detected | 70(CAPI2)
 TA0006-Credential Access | T1555-Credentials from Password Stores | Suspicious Active Directory DPAPI attributes accessed | 4662
@@ -203,20 +207,23 @@ TA0006-Credential Access | T1558.003-Kerberoasting  | KerberOAST ticket (TGS) re
 TA0007-Discovery | T1016-System Network Configuration Discovery  | Firewall configuration enumerated (command) | 4688
 TA0007-Discovery | T1016-System Network Configuration Discovery  | Firewall configuration enumerated (PowerShell) | 800/4103/4104
 TA0007-Discovery | T1016-System Network Configuration Discovery  | Tentative of zone transfer from a non DNS server detected | 6004(DNSserver)
+TA0007-Discovery | T1069.001-Discovery domain groups | Local domain group enumeration via RID brutforce | 4661
 TA0007-Discovery | T1069.001-Discovery local groups | Remote local administrator group enumerated via SharpHound | 4799
+TA0007-Discovery | T1069.002-Discovery domain groups | Domain group enumeration | 4661
+TA0007-Discovery | T1069.002-Discovery domain groups | Honeypot object (container, computer, group, user) enumerated | 4662
 TA0007-Discovery | T1069.002-Discovery domain groups | Massive SAM domain users & groups discovery | 4661
 TA0007-Discovery | T1069.002-Discovery domain groups | Sensitive SAM domain user & groups discovery | 4661
 TA0007-Discovery | T1069-Permission Groups Discovery  | Group discovery via commandline | 4688
 TA0007-Discovery | T1069-Permission Groups Discovery  | Group discovery via PowerShell | 800/4103/4104
 TA0007-Discovery | T1082-System Information Discovery | Audit policy settings collection | 4688
-TA0007-Discovery | T1087.002-Domain Account discovery | Honeypot object (container, computer, group, user) enumerated | 4662
 TA0007-Discovery | T1087.002-Domain Account discovery | Single source performing host enumeration over Kerberos ticket (TGS) detected | 4769
-TA0007-Discovery | T1087-Account discovery | Command execution related to Kerberos SPN enumeration activity detected | 4688/1
-TA0007-Discovery | T1087-Account discovery | Command execution related to Kerberos SPN enumeration activity detected | 800/4103/4104
+TA0007-Discovery | T1087-Account discovery | SPN enumeration | 4688/1
+TA0007-Discovery | T1087-Account discovery | SPN enumeration | 800/4103/4104
 TA0007-Discovery | T1087-Account discovery | User enumeration via commandline | 4688
 TA0007-Discovery | T1135-Network Share Discovery | Host performing advanced named pipes enumeration on different hosts via SMB | 5145
 TA0007-Discovery | T1135-Network Share Discovery | Network share discovery and/or connection via commandline | 4688
 TA0007-Discovery | T1135-Network Share Discovery | Network share manipulation via commandline | 4688
+TA0007-Discovery | T1201-Password Policy Discovery | Domain password policy enumeration | 4661
 TA0007-Discovery | T1201-Password Policy Discovery | Password policy discovery via commandline | 4688
 TA0008-Lateral Movement | T1021.001-Remote Desktop Protocol | Denied RDP authentication with valid credentials | 4825
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Admin share accessed via SMB (basic) | 5140/5145
@@ -233,6 +240,6 @@ TA0008-Lateral Movement | T1021.003-DCOM | DCOMexec process abuse via MMC | 4688
 TA0008-Lateral Movement | T1021.004-Remote services: SSH | OpenSSH native server feature installation | 800/4103/4104
 TA0008-Lateral Movement | T1021.004-Remote services: SSH | OpenSSH server for Windows activation/configuration detected | 800/4103/4104
 TA0008-Lateral Movement | T1563.002-RDP hijacking | RDP session hijack via TSCON abuse command | 4688
+TA0008-Lateral Movement | Tt1550.002-Use Alternate Authentication Material: Pass the Hash | LSASS dump via process access | 10
 TA0008-Lateral Movement | Tt1550.002-Use Alternate Authentication Material: Pass the Hash | Mimikatz Pass-the-hash login | 4624
-TA0008-Lateral Movement | Tt1550.002-Use Alternate Authentication Material: Pass the Hash | Mimikatz Pass-the-hash LSASS process accessed | 10
 TA0011-Command and control | T1090-Proxy | Netsh port forwarding abuse via proxy | 4688
