@@ -82,13 +82,15 @@ TA0003-Persistence | T1098.xxx-Account manipulation | User account set to not re
 TA0003-Persistence | T1098.xxx-Account manipulation | User account set to use Kerberos DES encryption | 4738
 TA0003-Persistence | T1098.xxx-Account manipulation | User account with password set to never expire detected | 4738
 TA0003-Persistence | T1098.xxx-Account manipulation | User account with password set to not require detected | 4738
+TA0003-Persistence | T1098.xxx-Account manipulation | User password change using current hash password - ChangeNTLM | 4723
+TA0003-Persistence | T1098.xxx-Account manipulation | User password change without previous password known - SetNTLM | 4724
 TA0003-Persistence | T1098-Account Manipulation | SPN added to an account (command) | 4688/1
 TA0003-Persistence | T1136.001-Create account-Local account | Disbled Guest (and support_388945a0) accounts enabled | 4722
 TA0003-Persistence | T1136.001-Create account-Local account | Local user account created on a single host | 4720
 TA0003-Persistence | T1136.001-Create account-Local account | SQL Server: disabled SA account enabled | 33205
 TA0003-Persistence | T1136.002-Create account-Domain account | Computer account created and deleted in a short period of time | 4741/4743
 TA0003-Persistence | T1136.002-Create account-Domain account | User account created and deleted in a short period of time | 4720/4726
-TA0003-Persistence | T1136.002-Create account-Domain account | User account created to fake a computer account (ends with "$") | 4720
+TA0003-Persistence | T1136.002-Create account-Domain account | User account created to fake a computer account (ends with "$") | 4720/4781
 TA0003-Persistence | T1136-Create account | User creation via commandline | 4688
 TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL lateral movement with CLR | 15457
 TA0003-Persistence | T1505.001-SQL Stored Procedures  | SQL Server xp_cmdshell procedure activated | 18457
@@ -177,12 +179,14 @@ TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | OpenSSH serv
 TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | OpenSSH server firewall configuration (PowerShell) | 800/4103/4104
 TA0005-Defense Evasion | T1564.006-Hide Artifacts: Run Virtual Instance  | WSL for Windows installation detected | 4688
 TA0006-Credential Access | 1558.004-Steal or Forge Kerberos Tickets: AS-REP Roasting | erberoas AS-REP Roasting ticket request detected | 4768
+TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS credential dump with LSASSY (kernel) | 4656/4663
+TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS credential dump with LSASSY (PowerShell) | 800/4103/4104
+TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS credential dump with LSASSY (process) | 4688/1
+TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS credential dump with LSASSY (share) | 5145
+TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS credentials dump via Task Manager (file) | 11
+TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS dump indicator via Task Manager access | 4688
 TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS process accessed by a non system account | 4656/4663
 TA0006-Credential Access | T1003.001-Credential dumping: LSASS | SAM database user credential dump with Mimikatz | 4661
-TA0006-Credential Access | T1003.001-Credential dumping: LSASS | win-os-LSASS credential dump with LSASSY (kernel) | 4656/4663
-TA0006-Credential Access | T1003.001-Credential dumping: LSASS | win-os-LSASS credential dump with LSASSY (PowerShell) | 800/4103/4104
-TA0006-Credential Access | T1003.001-Credential dumping: LSASS | win-os-LSASS credential dump with LSASSY (process) | 4688/1
-TA0006-Credential Access | T1003.001-Credential dumping: LSASS | win-os-LSASS credential dump with LSASSY (share) | 5145
 TA0006-Credential Access | T1003.002-Security Account Manager | SAM database access during DCshadow | 4661
 TA0006-Credential Access | T1003.002-Security Account Manager | Secretdump password dump over SMB ADMIN$ | 5145
 TA0006-Credential Access | T1003.003-NTDS | IFM created | 325/327
@@ -195,7 +199,8 @@ TA0006-Credential Access | T1003-Credential dumping | Diskshadow abuse | 4688
 TA0006-Credential Access | T1040-Network sniffing | Windows native sniffing tool Pktmon usage | 4688
 TA0006-Credential Access | T1110.xxx-Brut force | Brutforce enumeration on Windows OpenSSH server with non existing user | 4625/4
 TA0006-Credential Access | T1110.xxx-Brut force | Brutforce on Windows OpenSSH server with valid user | 4625/4
-TA0006-Credential Access | T1110.xxx-Brut force | Kerberos brutforce with not existing users | 4768/4771
+TA0006-Credential Access | T1110.xxx-Brut force | Kerberos brutforce enumeration with existing/unexsting users (Kerbrute) | 4771/4768
+TA0006-Credential Access | T1110.xxx-Brut force | Kerberos brutforce with not existing users | 4771/4768
 TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single source with different non existing accounts | 33205
 TA0006-Credential Access | T1552.004-Unsecured Credentials-Private Keys | Unknown application accessing certificate private key detected | 70(CAPI2)
 TA0006-Credential Access | T1555-Credentials from Password Stores | Suspicious Active Directory DPAPI attributes accessed | 4662
@@ -229,6 +234,7 @@ TA0008-Lateral Movement | T1021.001-Remote Desktop Protocol | Denied RDP authent
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Admin share accessed via SMB (basic) | 5140/5145
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Impacket WMIexec execution via SMB admin share | 5145
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Lateral movement by mounting a network share - net use (command) | 4688/4648
+TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Multiple failed attempt to network share | 5140/5145
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | New file share created on a host | 5142
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Psexec remote execution via SMB | 5145
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Remote service creation over SMB | 5145
