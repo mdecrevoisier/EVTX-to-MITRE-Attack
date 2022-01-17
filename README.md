@@ -53,6 +53,8 @@ TA0002-Execution | T1059.001-Command and Scripting Interpreter: PowerShell | Enc
 TA0002-Execution | T1059.001-Command and Scripting Interpreter: PowerShell | Interactive PipeShell over SMB named pipe | 800/4103/4104 | 
 TA0002-Execution | T1059.003-Windows Command Shell | Encoded PowerShell payload deployed via process execution | 4688 | 
 TA0002-Execution | T1059.003-Windows Command Shell | SQL Server payload injectection for reverse shell (MSF) | 4688 | 
+TA0002-Execution | T1204-User execution | Edge abuse for payload download via console | 4688 | 
+TA0002-Execution | T1204-User execution | Edge/Chrome headless feature abuse for payload download | 4688 | 
 TA0002-Execution | T1569.002-Service Execution | PSexec installation detected | 4688 | 
 TA0002-Execution | T1569.002-Service Execution | Service massive failures (native) | 7000/7009 | Tchopper
 TA0002-Execution | T1569.002-Service Execution | Service massive installation (native) | 7045/4697 | Tchopper
@@ -87,8 +89,8 @@ TA0003-Persistence | T1098.xxx-Account manipulation | User account with password
 TA0003-Persistence | T1098.xxx-Account manipulation | User password change using current hash password - ChangeNTLM | 4723 | Mimikatz
 TA0003-Persistence | T1098.xxx-Account manipulation | User password change without previous password known - SetNTLM | 4724 | Mimikatz
 TA0003-Persistence | T1098.xxx-Account Manipulation | User performing massive group membership changes on multiple differents groups | 4728,4756 | 
+TA0003-Persistence | T1098-Account Manipulation | Disabled guest or builtin account activated | 4722 | 
 TA0003-Persistence | T1098-Account Manipulation | SPN added to an account (command) | 4688/1 | 
-TA0003-Persistence | T1136.001-Create account-Local account | Disbled Guest (and support_388945a0) accounts enabled | 4722 | 
 TA0003-Persistence | T1136.001-Create account-Local account | Local user account created on a single host | 4720 | 
 TA0003-Persistence | T1136.001-Create account-Local account | SQL Server: disabled SA account enabled | 33205 | 
 TA0003-Persistence | T1136.002-Create account-Domain account | Computer account created and deleted in a short period of time | 4741/4743 | 
@@ -213,8 +215,8 @@ TA0006-Credential Access | T1110.xxx-Brut force | Kerberos brutforce with not ex
 TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single source with different non existing accounts | 33205 | 
 TA0006-Credential Access | T1552.004-Unsecured Credentials-Private Keys | Unknown application accessing certificate private key detected | 70(CAPI2) | Mimikatz
 TA0006-Credential Access | T1555.003-Credentials from Password Stores: Credentials from Web Browsers | User browser credentials dump via network share | 5145 | DonPapi, Lazagne
+TA0006-Credential Access | T1555.004-Windows Credential Manager | Credentials (protected by DPAPI) dump via network share | 5145 | DonPapi, Lazagne
 TA0006-Credential Access | T1555-Credentials from Password Stores | Suspicious Active Directory DPAPI attributes accessed | 4662 | 
-TA0006-Credential Access | T1555-Credentials from Password Stores | User application credentials dump via network share  | 5145 | DonPapi, Lazagne
 TA0006-Credential Access | T1555-Credentials from Password Stores | User files dump via network share | 5145 | DonPapi, Lazagne
 TA0006-Credential Access | T1557.001-MiM:LLMNR/NBT-NS Poisoning and SMB Relay | Discovery for print spooler bug abuse via named pipe | 5145 | 
 TA0006-Credential Access | T1558.001-Golden Ticket | Kerberos TGS ticket request related to a potential Golden ticket | 4769 | Golden ticket
@@ -223,6 +225,7 @@ TA0006-Credential Access | T1558.001-Golden Ticket | Success login impersonation
 TA0006-Credential Access | T1558.003-Kerberoasting | KerberOAST ticket (TGS) request detected (low encryption) | 4769 | Kerberoast
 TA0006-Credential Access | T1558.004-Steal or Forge Kerberos Tickets: AS-REP Roasting | Kerberos AS-REP Roasting ticket request detected | 4768 | AS-REP Roasting
 TA0006-Credential Access | T1558-Steal or Forge Kerberos Tickets | Kerberos ticket without a trailing $  | 4768-4769 | CVE-2021-42278/42287 & SAM-the-admin
+TA0006-Credential Access | T1558-Steal or Forge Kerberos Tickets | Suspicious Kerberos proxiable ticket | 4768 | CVE-2021-42278/42287 & SAM-the-admin
 TA0007-Discovery | T1016-System Network Configuration Discovery | Firewall configuration enumerated (command) | 4688 | 
 TA0007-Discovery | T1016-System Network Configuration Discovery | Firewall configuration enumerated (PowerShell) | 800/4103/4104 | 
 TA0007-Discovery | T1016-System Network Configuration Discovery | Tentative of zone transfer from a non DNS server detected | 6004(DNSserver) | 
@@ -253,7 +256,6 @@ TA0008-Lateral Movement | T1021.001-Remote Desktop Protocol | Denied RDP login w
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Admin share accessed via SMB (basic) | 5140/5145 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Impacket WMIexec execution via SMB admin share | 5145 | WMIexec
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Lateral movement by mounting a network share - net use (command) | 4688/4648 | 
-TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Multiple failed attempt to network share | 5140/5145 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | New file share created on a host | 5142 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Psexec remote execution via SMB | 5145 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Remote service creation over SMB | 5145 | 
