@@ -49,8 +49,9 @@ TA0002-Execution | T1053.005-Scheduled Task | Schedule task created and deleted 
 TA0002-Execution | T1053.005-Scheduled Task | Schedule task created with suspicious arguments | 4698 | Atexec
 TA0002-Execution | T1053.005-Scheduled Task | Schedule task fastly created and deleted | 4698,4699 | Atexec
 TA0002-Execution | T1053.005-Scheduled Task | Scheduled task creation | 4688 | 
-TA0002-Execution | T1059.001-Command and Scripting Interpreter: PowerShell | Encoded PowerShell payload deployed (PowerShell) | 800/4103/4104 | 
+TA0002-Execution | T1059.001-Command and Scripting Interpreter: PowerShell | Encoded PowerShell payload deployed | 800/4103/4104 | 
 TA0002-Execution | T1059.001-Command and Scripting Interpreter: PowerShell | Interactive PipeShell over SMB named pipe | 800/4103/4104 | 
+TA0002-Execution | T1059.001-Command and Scripting Interpreter: PowerShell | Payload downloaded via PowerShell | 800/4103/4104 | 
 TA0002-Execution | T1059.003-Windows Command Shell | Encoded PowerShell payload deployed via process execution | 4688 | 
 TA0002-Execution | T1059.003-Windows Command Shell | SQL Server payload injectection for reverse shell (MSF) | 4688 | 
 TA0002-Execution | T1204-User execution | Edge abuse for payload download via console | 4688 | 
@@ -91,6 +92,7 @@ TA0003-Persistence | T1098.xxx-Account manipulation | User password change witho
 TA0003-Persistence | T1098.xxx-Account Manipulation | User performing massive group membership changes on multiple differents groups | 4728,4756 | 
 TA0003-Persistence | T1098-Account Manipulation | Disabled guest or builtin account activated | 4722 | 
 TA0003-Persistence | T1098-Account Manipulation | SPN added to an account (command) | 4688/1 | 
+TA0003-Persistence | T1136.001-Create account-Local account | Hidden account creation (with fast deletion) | 4720/4726 | 
 TA0003-Persistence | T1136.001-Create account-Local account | Local user account created on a single host | 4720 | 
 TA0003-Persistence | T1136.001-Create account-Local account | SQL Server: disabled SA account enabled | 33205 | 
 TA0003-Persistence | T1136.002-Create account-Domain account | Computer account created and deleted in a short period of time | 4741/4743 | 
@@ -115,9 +117,9 @@ TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service |
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service created for RDP session hijack | 7045/4697 | 
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service creation (command) | 4688 | 
 TA0003-Persistence | T1543.003-Create or Modify System Process-Windows Service | Service creation (PowerShell) | 800/4103/4104 | 
-TA0003-Persistence | T1546.003 -Windows Management Instrumentation Event Subscription | System crash behavior manipulation  (registry) | 13 | WMImplant
-TA0003-Persistence | T1546.003 -Windows Management Instrumentation Event Subscription | WMI registration (PowerShell) | 800/4103/4104 | 
-TA0003-Persistence | T1546.003 -Windows Management Instrumentation Event Subscription | WMI registration | 19,20,21 | 
+TA0003-Persistence | T1546.003-Windows Management Instrumentation Event Subscription | System crash behavior manipulation  (registry) | 13 | WMImplant
+TA0003-Persistence | T1546.003-Windows Management Instrumentation Event Subscription | WMI registration (PowerShell) | 800/4103/4104 | 
+TA0003-Persistence | T1546.003-Windows Management Instrumentation Event Subscription | WMI registration | 19,20,21 | 
 TA0003-Persistence | T1546.007-Netsh Helper DLL | Netsh helper DLL command abuse | 4688 | 
 TA0003-Persistence | T1546.007-Netsh Helper DLL | Netsh helper DLL registry abuse | 12/13 | 
 TA0003-Persistence | T1546-Event Triggered Execution | AdminSDHolder container permissions modified | 5136 | 
@@ -131,6 +133,7 @@ TA0003-Persistence | T1574.010-Hijack execution flow: service file permissions w
 TA0004-Privilege Escalation | T1068-Exploitation for Privilege Escalation | Privilege SeMachineAccountPrivilege abuse | 4673 | CVE-2021-42278/42287 & SAM-the-admin
 TA0004-Privilege Escalation | T1134.001- Access Token Manipulation: Token Impersonation/Theft | Anonymous login | 4624/4688 | RottenPotatoNG
 TA0004-Privilege Escalation | T1134.002- Access Token Manipulation: Create Process with Token | Privilege escalation via runas (command) | 4688/4648/4624 | 
+TA0004-Privilege Escalation | T1134.002- Access Token Manipulation: Create Process with Token | Privilege escalation via RunasCS | 4688 | 
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | New access rights granted to an account by a standard user | 4717 | 
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | User right granted to an account by a standard user | 4704 | 
 TA0004-Privilege Escalation | T1484.001-Domain Policy Modification-Group Policy Modification | Modification of a sensitive Group Policy  | 5136 | 
@@ -174,11 +177,13 @@ TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification |
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | OCSP security settings changed | 5124(OCSP) | 
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Permissions changed on a GPO | 5136 | 
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Sensitive GUID related to "Replicate directory changes" detected  | 4662 | DCSync
+TA0005-Defense Evasion | T1553.003- Subvert Trust Controls: SIP and Trust Provider Hijacking  |  | 12-13 | 
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: critical security component disabled (command) | 4688/1 | 
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: critical security component disabled (PowerShell) | 800/4103/4104 | 
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: default action set to allow any threat (PowerShell) | 800/4103/4104 | 
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: exclusion added (native) | 5007 | 
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: exclusion added (PowerShell) | 800/4103/4104 | 
+TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: service component status disabled (Registry via Sysmon) | 13 | 
 TA0005-Defense Evasion | T1562.004-Disable or Modify System Firewall | Firewall deactivation (cmd) | 4688 | 
 TA0005-Defense Evasion | T1562.004-Disable or Modify System Firewall | Firewall deactivation (firewall) | 2003/4950 | 
 TA0005-Defense Evasion | T1562.004-Disable or Modify System Firewall | Firewall deactivation (PowerShell) | 800/4103/4104 | 
@@ -207,6 +212,8 @@ TA0006-Credential Access | T1003.003-OS Credential-Dumping NTDS | DSRM password 
 TA0006-Credential Access | T1003.006-DCSync | Member added to a sensitive Exchange security group to perform DCsync attack | 4756 | DCSync
 TA0006-Credential Access | T1003-Credential dumping | Backdoor introduction via registry permission change through WMI (DAMP) | 4674 | DAMP
 TA0006-Credential Access | T1003-Credential dumping | Diskshadow abuse | 4688 | 
+TA0006-Credential Access | T1003-Credential dumping | Wdigest authentication enabled (Reg via command) | 4688 | 
+TA0006-Credential Access | T1003-Credential dumping | Wdigest authentication enabled (Reg via Sysmon) | 12/13 | 
 TA0006-Credential Access | T1040-Network sniffing | Windows native sniffing tool Pktmon usage | 4688 | 
 TA0006-Credential Access | T1110.xxx-Brut force | Brutforce enumeration on Windows OpenSSH server with non existing user | 4625/4 | SSH server
 TA0006-Credential Access | T1110.xxx-Brut force | Brutforce on Windows OpenSSH server with valid user | 4625/4 | SSH server
@@ -256,6 +263,7 @@ TA0008-Lateral Movement | T1021.001-Remote Desktop Protocol | Denied RDP login w
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Admin share accessed via SMB (basic) | 5140/5145 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Impacket WMIexec execution via SMB admin share | 5145 | WMIexec
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Lateral movement by mounting a network share - net use (command) | 4688/4648 | 
+TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Multiple failed attempt to network share | 5140/5145 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | New file share created on a host | 5142 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Psexec remote execution via SMB | 5145 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Remote service creation over SMB | 5145 | 
@@ -266,11 +274,12 @@ TA0008-Lateral Movement | T1021.003-DCOM | DCOMexec privilege abuse | 4674 |
 TA0008-Lateral Movement | T1021.003-DCOM | DCOMexec process abuse via MMC | 4688 | 
 TA0008-Lateral Movement | T1021.004-Remote services: SSH | OpenSSH native server feature installation | 800/4103/4104 | SSH server
 TA0008-Lateral Movement | T1021.004-Remote services: SSH | OpenSSH server for Windows activation/configuration detected | 800/4103/4104 | SSH server
+TA0008-Lateral Movement | T1021.006-Windows Remote Management | WinRM listening service reconnaissance | 4656 | 
 TA0008-Lateral Movement | T1550.002-Use Alternate Authentication Material: Pass the Hash | LSASS dump via process access | 10 | Mimikatz
 TA0008-Lateral Movement | T1550.002-Use Alternate Authentication Material: Pass the Hash | Pass-the-hash login | 4624 | Mimikatz
 TA0008-Lateral Movement | T1563.002-RDP hijacking | RDP session hijack via TSCON abuse command | 4688 | 
 TA0009-Collection | T1125-Video capture | RDP shadow session started (registry) | 13 | 
-TA0011-Command and control | T1572-Protocol tunneling | RDP tunneling via port forwarding | 4688 | 
+TA0011-Command and control | T1572-Protocol tunneling | RDP tunneling configuration enabled for port forwarding | 4688 | 
 TA0040-Impact | T1490-Inhibit System Recovery | VSS backup deletion (PowerShell) | 800/4103/4104 | 
 TA0040-Impact | T1490-Inhibit System Recovery | VSS backup deletion (WMI) | 4688 | 
 TA0040-Impact | T1490-Inhibit System Recovery | Windows native backup deletion | 4688 | 
