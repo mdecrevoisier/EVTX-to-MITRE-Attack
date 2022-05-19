@@ -12,7 +12,7 @@ IOCs are provided in the EVTX format, the standard format established by Microso
 
 ## Microsoft log sources used:
 * Windows 10
-* Windows Server 2021 R2 and higher
+* Windows Server 2012 R2 and higher
 * Active Directory Domain Services (ADDS)
 * Active Directory Certification Services (ADCS / PKI) with online responder (OCSP)
 * SQL Server 2014
