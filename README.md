@@ -127,9 +127,9 @@ TA0003-Persistence | T1546.003-Windows Management Instrumentation Event Subscrip
 TA0003-Persistence | T1546.007-Netsh Helper DLL | Netsh helper DLL command abuse | 4688 | 
 TA0003-Persistence | T1546.007-Netsh Helper DLL | Netsh helper DLL registry abuse | 12/13 | 
 TA0003-Persistence | T1546-Event Triggered Execution | AdminSDHolder container permissions modified | 5136 | 
-TA0003-Persistence | T1546-Event Triggered Execution | localizationDisplayId attribute abuse for backdoor introduction | 5136 | 
-TA0003-Persistence | T1547.008-Boot or Logon Autostart Execution: LSASS Driver | win-os-security package (SSP) loaded into LSA (native) | 4622 | 
-TA0003-Persistence | T1574.002-DLL Side-Loading | DNS DLL "serverlevelplugindll" command execution (+registry set) | 1/13 | DNS DLL abuse
+TA0003-Persistence | T1546-Event Triggered Execution | Extended rights backdoor obfuscation (via localizationDisplayId) | 5136 | 
+TA0003-Persistence | T1547.008-Boot or Logon Autostart Execution: LSASS Driver | Security package (SSP) loaded into LSA (native) | 4622 | 
+TA0003-Persistence | T1574.002-DLL Side-Loading | DNS DLL "serverlevelplugindll" command execution | 1/13 | DNS DLL abuse
 TA0003-Persistence | T1574.002-DLL Side-Loading | Failed DLL loaded by DNS server | 150 | DNS DLL abuse
 TA0003-Persistence | T1574.002-DLL Side-Loading | Success DLL loaded by DNS server | 770 | DNS DLL abuse
 TA0003-Persistence | T1574.010-Hijack execution flow: service file permissions weakness | Service permissions modified (registry) | 4688 | 
@@ -267,7 +267,6 @@ TA0008-Lateral Movement | T1021.001-Remote Desktop Protocol | Denied RDP login w
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Admin share accessed via SMB (basic) | 5140/5145 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Impacket WMIexec execution via SMB admin share | 5145 | WMIexec
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Lateral movement by mounting a network share - net use (command) | 4688/4648 | 
-TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Multiple failed attempt to network share | 5140/5145 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | New file share created on a host | 5142 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Psexec remote execution via SMB | 5145 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Remote service creation over SMB | 5145 | 
