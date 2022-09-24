@@ -34,7 +34,6 @@ If you are interesting in external projects arround SIGMA and EVTX analysis, I w
 
 Att@ck Tactic	| Att@ck  Technique	| Description | 	Event IDs   |			Threat name / Tool / CVE
 |:-------------------------|:------------------|:-------------------------|:------------------|:------------------|
-Github
 Antivirus | Antivirus | Defender: antivirus not up to date | 1151 | 
 Antivirus | Antivirus | Defender: massive malware outbreak detected on multiple hosts | 1116 | 
 Antivirus | Antivirus | Defender: massive malwares detected on a single host | 1116 | 
@@ -197,7 +196,7 @@ TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | Firewall rul
 TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | OpenSSH server firewall configuration (command) | 4688/1 | SSH server
 TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | OpenSSH server firewall configuration (firewall) | 2004 | SSH server
 TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | OpenSSH server firewall configuration (PowerShell) | 800/4103/4104 | SSH server
-TA0005-Defense Evasion | T1564.006-Hide Artifacts: Run Virtual Instance | WSL for Windows installation detected | 4688 | 
+TA0005-Defense Evasion | T1564.006-Hide Artifacts: Run Virtual Instance | WSL for Windows installation detected (command) | 4688 | 
 TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS credential dump with LSASSY (kernel) | 4656/4663 | 
 TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS credential dump with LSASSY (PowerShell) | 800/4103/4104 | 
 TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS credential dump with LSASSY (process) | 4688/1 | 
@@ -227,6 +226,7 @@ TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single so
 TA0006-Credential Access | T1552.004-Unsecured Credentials-Private Keys | Unknown application accessing certificate private key detected | 70(CAPI2) | Mimikatz
 TA0006-Credential Access | T1555.003-Credentials from Password Stores: Credentials from Web Browsers | User browser credentials dump via network share | 5145 | DonPapi, Lazagne
 TA0006-Credential Access | T1555.004-Windows Credential Manager | Credentials (protected by DPAPI) dump via network share | 5145 | DonPapi, Lazagne
+TA0006-Credential Access | T1555.004-Windows Credential Manager | Vault credentials were read | 5382 | 
 TA0006-Credential Access | T1555-Credentials from Password Stores | Suspicious Active Directory DPAPI attributes accessed | 4662 | 
 TA0006-Credential Access | T1555-Credentials from Password Stores | User files dump via network share | 5145 | DonPapi, Lazagne
 TA0006-Credential Access | T1557.001-MiM:LLMNR/NBT-NS Poisoning and SMB Relay | Discovery for print spooler bug abuse via named pipe | 5145 | 
