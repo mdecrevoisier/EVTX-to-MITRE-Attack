@@ -33,7 +33,7 @@ If you are interesting in external projects arround SIGMA and EVTX analysis, I w
 ## IOCs content
 
 Att@ck Tactic	| Att@ck  Technique	| Description | 	Event IDs   |			Threat name / Tool / CVE
-|:-------------------------|:------------------|:-------------------------|:------------------|:------------------|
+	|:-------------------------|:------------------|:-------------------------|:------------------|:------------------|
 Antivirus | Antivirus | Defender: antivirus not up to date | 1151 | 
 Antivirus | Antivirus | Defender: massive malware outbreak detected on multiple hosts | 1116 | 
 Antivirus | Antivirus | Defender: massive malwares detected on a single host | 1116 | 
@@ -170,7 +170,7 @@ TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification |
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | OCSP security settings changed | 5124(OCSP) | 
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Permissions changed on a GPO | 5136 | 
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Sensitive GUID related to "Replicate directory changes" detected  | 4662 | DCSync
-TA0005-Defense Evasion | T1553.003- Subvert Trust Controls: SIP and Trust Provider Hijacking  |  | 12-13 | 
+TA0005-Defense Evasion | T1553.003- Subvert Trust Controls: SIP and Trust Provider Hijacking  | Suspicious SIP or trust provider registration | 12-13 | 
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: critical security component disabled (command) | 4688/1 | 
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: critical security component disabled (PowerShell) | 800/4103/4104 | 
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: default action set to allow any threat (PowerShell) | 800/4103/4104 | 
@@ -205,6 +205,7 @@ TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS credentia
 TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS dump indicator via Task Manager access | 4688 | 
 TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS process accessed by a non system account | 4656/4663 | 
 TA0006-Credential Access | T1003.001-Credential dumping: LSASS | SAM database user credential dump | 4661 | Mimikatz
+TA0006-Credential Access | T1003.001-Credential dumping: LSASS | Task manager used to dump LSASS process | 4663 | 
 TA0006-Credential Access | T1003.002-Security Account Manager | Password dump over SMB ADMIN$ | 5145 | Secretdump
 TA0006-Credential Access | T1003.002-Security Account Manager | SAM database access during DCshadow | 4661 | DCShadow
 TA0006-Credential Access | T1003.003-NTDS | IFM created | 325/327 | 
@@ -267,6 +268,7 @@ TA0008-Lateral Movement | T1021.001-Remote Desktop Protocol | Denied RDP login w
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Admin share accessed via SMB (basic) | 5140/5145 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Impacket WMIexec execution via SMB admin share | 5145 | WMIexec
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Lateral movement by mounting a network share - net use (command) | 4688/4648 | 
+TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Multiple failed attempt to network share | 5140/5145 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | New file share created on a host | 5142 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Psexec remote execution via SMB | 5145 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Remote service creation over SMB | 5145 | 
