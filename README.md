@@ -1,7 +1,7 @@
 # EVTX to MITRE Att@ck
 
 ## Project purpose
-**EVTX to MITRE Att@ck** is a *Security Information Management System* orientated project. It provides >200 Windows IOCs indicators classified per Tactic and Technique in order to address different security scenarios with your SIEM:
+**EVTX to MITRE Att@ck** is a *Security Information Management System* orientated project. It provides >270 Windows IOCs indicators classified per Tactic and Technique in order to address different security scenarios with your SIEM:
 * Measure your security coverage
 * Enhance your detection capacities
 * Identify security gaps or uncovered threats
@@ -93,6 +93,7 @@ TA0003-Persistence | T1098.xxx-Account manipulation | User account with password
 TA0003-Persistence | T1098.xxx-Account manipulation | User password change using current hash password - ChangeNTLM | 4723 | Mimikatz
 TA0003-Persistence | T1098.xxx-Account manipulation | User password change without previous password known - SetNTLM | 4724 | Mimikatz
 TA0003-Persistence | T1098.xxx-Account Manipulation | User performing massive group membership changes on multiple differents groups | 4728,4756 | 
+TA0003-Persistence | T1098-Account Manipulation | Computer account set for RBCD delegation | 5136 | 
 TA0003-Persistence | T1098-Account Manipulation | Disabled guest or builtin account activated | 4722 | 
 TA0003-Persistence | T1098-Account Manipulation | SPN added to an account (command) | 4688/1 | 
 TA0003-Persistence | T1136.001-Create account-Local account | Hidden account creation (with fast deletion) | 4720/4726 | 
