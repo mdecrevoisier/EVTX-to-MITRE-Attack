@@ -1,7 +1,7 @@
-# EVTX to MITRE Att@ck
+# EVTX to MITRE ATT@CK
 
 ## Project purpose
-**EVTX to MITRE Att@ck** is a *Security Information Management System* orientated project. It provides >270 Windows IOCs indicators classified per Tactic and Technique in order to address different security scenarios with your SIEM:
+**EVTX to MITRE ATT@CK** is a *Security Information Management System* orientated project. It provides >270 Windows IOCs indicators classified per Tactic and Technique in order to address different security scenarios with your SIEM:
 * Measure your security coverage
 * Enhance your detection capacities
 * Identify security gaps or uncovered threats
@@ -32,7 +32,7 @@ If you are interesting in external projects arround SIGMA and EVTX analysis, I w
 
 ## IOCs content
 
-Att@ck Tactic	| Att@ck  Technique	| Description | 	Event IDs   |			Threat name / Tool / CVE
+ATT@CK Tactic	| ATT@CK  Technique	| Description | 	Event IDs   |			Threat name / Tool / CVE
 |:-------------------------|:------------------|:-------------------------|:------------------|:------------------|
 Antivirus | Antivirus | Defender: antivirus not up to date | 1151 | 
 Antivirus | Antivirus | Defender: massive malware outbreak detected on multiple hosts | 1116 | 
