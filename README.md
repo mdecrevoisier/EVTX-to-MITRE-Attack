@@ -76,7 +76,7 @@ TA0003-Persistence | T1098.xxx-Account Manipulation | Medium risk local-domain l
 TA0003-Persistence | T1098.xxx-Account manipulation | Medium risk Skype/Lync/OCS group membership change | 4728 or 4756 or 4732 | 
 TA0003-Persistence | T1098.xxx-Account Manipulation | Member added and removed from a group by a user account in a short period of time  | 4728/29,4756/57,4732/33 | 
 TA0003-Persistence | T1098.xxx-Account Manipulation | Member added to a group by the same account | 4728 or 4756 or 4732 | 
-TA0003-Persistence | T1098.xxx-Account manipulation | Member added to DNSadmins group for DLL abuse | 4728 or 4756 or 4732 | DNS DLL abuse
+TA0003-Persistence | T1098.xxx-Account manipulation | Member added to DNSadmins group for DLL abuse | 4732 | DNS DLL abuse
 TA0003-Persistence | T1098.xxx-Account manipulation | New admin (or likely) created by a non administrative account | 4720 | 
 TA0003-Persistence | T1098.xxx-Account manipulation | SPN modification of a computer account (Directory Services) | 5136 | DCShadow
 TA0003-Persistence | T1098.xxx-Account manipulation | SPN modification of a computer account | 4742 | 
@@ -141,9 +141,11 @@ TA0004-Privilege Escalation | T1068-Exploitation for Privilege Escalation | Priv
 TA0004-Privilege Escalation | T1134.001- Access Token Manipulation: Token Impersonation/Theft | Anonymous login | 4624 and 4688 | RottenPotatoNG
 TA0004-Privilege Escalation | T1134.002- Access Token Manipulation: Create Process with Token | Privilege escalation via runas (command) | 4688 and 4648 and 4624 | 
 TA0004-Privilege Escalation | T1134.002- Access Token Manipulation: Create Process with Token | Privilege escalation via RunasCS | 1 or 4688 | 
+TA0004-Privilege Escalation | T1134.005-Access Token Manipulation: SID-History Injection | SID history value S/F to be added to a domain account | 4765/4766/4738 | 
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | New access rights granted to an account by a standard user | 4717 or 4718 | 
 TA0004-Privilege Escalation | T1134-Access Token Manipulation | User right granted to an account by a standard user | 4704 | 
 TA0004-Privilege Escalation | T1484.001-Domain Policy Modification-Group Policy Modification | Modification of a sensitive Group Policy  | 5136 | 
+TA0004-Privilege Escalation | T1484.002- Domain or Tenant Policy Modification: Trust Modification  | New external trust added | 4865, 4076 | 
 TA0004-Privilege Escalation | T1543.003-Create or Modify System Process-Windows Service | PSexec service installation detected | 7045 or 4697 | 
 TA0004-Privilege Escalation | T1546.008-Event Triggered Execution: Accessibility Features | CMD executed by stickey key and detected via hash | 1 or 4688 | Sticky key
 TA0004-Privilege Escalation | T1546.008-Event Triggered Execution: Accessibility Features | Sticky key called CMD via command execution | 1 or 4688 | Sticky key
@@ -175,12 +177,15 @@ TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification |
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Permissions changed on a GPO | 5136 | 
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Sensitive GUID related to "Replicate directory changes" detected  | 4662 | DCSync
 TA0005-Defense Evasion | T1553.003- Subvert Trust Controls: SIP and Trust Provider Hijacking  | Suspicious SIP or trust provider registration | 12 or 12 | 
+TA0005-Defense Evasion | T1562.001-Impair Defenses: Disable or Modify Tools | Unload SYSMON driver | 1 | 
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: critical security component disabled (command) | 1 or 4688 | 
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: critical security component disabled (PowerShell) | 800 or 4103 or 4104 | 
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: default action set to allow any threat (PowerShell) | 800 or 4103 or 4104 | 
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: exclusion added (native) | 5007 | 
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: exclusion added (PowerShell) | 800 or 4103 or 4104 | 
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: service component status disabled (Registry via Sysmon) | 13 | 
+TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Virtualization disabled (Credential guard) | 8 | 
+TA0005-Defense Evasion | T1562.002-Impair Defenses: Disable Windows Event Logging  |  | 541 | 
 TA0005-Defense Evasion | T1562.002-Impair Defenses: Disable Windows Event Logging  | Audit policy disabled | 4719 | 
 TA0005-Defense Evasion | T1562.002-Impair Defenses: Disable Windows Event Logging  | Domain policy changed on one or multiple hosts | 4739 | 
 TA0005-Defense Evasion | T1562.002-Impair Defenses: Disable Windows Event Logging  | Membership of a special group updated | 4908 | 
@@ -272,6 +277,7 @@ TA0008-Lateral Movement | T1021.001-Remote Desktop Protocol | Denied RDP login w
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Admin share accessed via SMB (basic) | 5140 or 5145 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Impacket WMIexec execution via SMB admin share | 5145 | WMIexec
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Lateral movement by mounting a network share - net use (command) | 4688 and 4648 | 
+TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Multiple failed attempt to network share | 5140 or 5145 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | New file share created on a host | 5142 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Psexec remote execution via SMB | 5145 | 
 TA0008-Lateral Movement | T1021.002-SMB Windows Admin Shares | Remote service creation over SMB | 5145 | 
@@ -287,9 +293,14 @@ TA0008-Lateral Movement | T1550.002-Use Alternate Authentication Material: Pass 
 TA0008-Lateral Movement | T1550.002-Use Alternate Authentication Material: Pass the Hash | Pass-the-hash login | 4624 | Mimikatz
 TA0008-Lateral Movement | T1563.002-RDP hijacking | RDP session hijack via TSCON abuse command | 1 or 4688 | 
 TA0009-Collection | T1125-Video capture | RDP shadow session started (registry) | 13 | 
-TA0011-Command and control | T1090 | Proxy configuration changed | 5600 | 
+TA0011-Command and control | T1090-Proxy | Proxy configuration changed | 5600 | 
 TA0011-Command and control | T1572-Protocol tunneling | RDP tunneling configuration enabled for port forwarding | 1 or 4688 | 
 TA0040-Impact | T1490-Inhibit System Recovery | VSS backup deletion (PowerShell) | 800 or 4103 or 4104 | 
 TA0040-Impact | T1490-Inhibit System Recovery | VSS backup deletion (WMI) | 1 or 4688 | 
 TA0040-Impact | T1490-Inhibit System Recovery | Windows native backup deletion | 1 or 4688 | 
 TA0040-Impact | T1565-Data manipulation | DNS hosts file modified | 11 | 
+TA0006-Credential Access | T1110.xxx-Brut force | Local login failure on target | 4625 | 
+
+
+
+
