@@ -185,6 +185,7 @@ TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Def
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: exclusion added (PowerShell) | 800 or 4103 or 4104 | 
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Defender: service component status disabled (Registry via Sysmon) | 13 | 
 TA0005-Defense Evasion | T1562.001-Impair Defenses-Disable or modify tools | Virtualization disabled (Credential guard) | 8 | 
+TA0005-Defense Evasion | T1562.002-Disable Windows Event Logging  | OCSP auditing sttings changed | 5123(OCSP) | 
 TA0005-Defense Evasion | T1562.002-Impair Defenses: Disable Windows Event Logging  |  | 541 | 
 TA0005-Defense Evasion | T1562.002-Impair Defenses: Disable Windows Event Logging  | Audit policy disabled | 4719 | 
 TA0005-Defense Evasion | T1562.002-Impair Defenses: Disable Windows Event Logging  | Domain policy changed on one or multiple hosts | 4739 | 
@@ -206,6 +207,7 @@ TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | OpenSSH serv
 TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | OpenSSH server firewall configuration (firewall) | 2004 | SSH server
 TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | OpenSSH server firewall configuration (PowerShell) | 800 or 4103 or 4104 | SSH server
 TA0005-Defense Evasion | T1564.006-Hide Artifacts: Run Virtual Instance | WSL for Windows installation detected (command) | 1 or 4688 | 
+TA0005-Defense Evasion | T1564.006-Hide Artifacts: Run Virtual Instance | WSL for Windows installation detected (command) | 9 | 
 TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS credential dump with LSASSY (kernel) | 4656 or 4663 | 
 TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS credential dump with LSASSY (PowerShell) | 800 or 4103 or 4104 | 
 TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS credential dump with LSASSY (process) | 1 or 4688 | 
@@ -232,6 +234,7 @@ TA0006-Credential Access | T1110.xxx-Brut force | Brutforce enumeration on Windo
 TA0006-Credential Access | T1110.xxx-Brut force | Brutforce on Windows OpenSSH server with valid user | 4625 or 4 | SSH server
 TA0006-Credential Access | T1110.xxx-Brut force | Kerberos brutforce enumeration with existing/unexsting users (Kerbrute) | 4771 or 4768 | 
 TA0006-Credential Access | T1110.xxx-Brut force | Kerberos brutforce with not existing users | 4771 or 4768 | 
+TA0006-Credential Access | T1110.xxx-Brut force | Local login failure on target | 4625 | 
 TA0006-Credential Access | T1110.xxx-Brut force | Login failure from a single source with different non existing accounts | 33205 | 
 TA0006-Credential Access | T1552.004-Unsecured Credentials-Private Keys | Unknown application accessing certificate private key detected | 70(CAPI2) | Mimikatz
 TA0006-Credential Access | T1555.003-Credentials from Password Stores: Credentials from Web Browsers | User browser credentials dump via network share | 5145 | DonPapi, Lazagne
@@ -299,8 +302,3 @@ TA0040-Impact | T1490-Inhibit System Recovery | VSS backup deletion (PowerShell)
 TA0040-Impact | T1490-Inhibit System Recovery | VSS backup deletion (WMI) | 1 or 4688 | 
 TA0040-Impact | T1490-Inhibit System Recovery | Windows native backup deletion | 1 or 4688 | 
 TA0040-Impact | T1565-Data manipulation | DNS hosts file modified | 11 | 
-TA0006-Credential Access | T1110.xxx-Brut force | Local login failure on target | 4625 | 
-
-
-
-
