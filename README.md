@@ -169,6 +169,7 @@ TA0005-Defense Evasion | T1112-Modify registry | Impacket SMBexec service regist
 TA0005-Defense Evasion | T1197-BITS job | Command execution related to a suspicious BITS activity detected | 1 or 4688 | 
 TA0005-Defense Evasion | T1197-BITS job | Command execution related to a suspicious BITS activity detected | 800 or 4103 or 4104 | 
 TA0005-Defense Evasion | T1197-BITS job | High amount of data downloaded via BITS | 60 | 
+TA0005-Defense Evasion | T1202- Indirect Command Execution  | WSL activation | 9 | 
 TA0005-Defense Evasion | T1207-Rogue domain controller | New fake domain controller registration | 5137 or 5141 | DCShadow
 TA0005-Defense Evasion | T1207-Rogue domain controller | Sensitive attributes accessed | 4662 | DCShadow
 TA0005-Defense Evasion | T1222.001-File and Directory Permissions Modification | Computer account modifying AD permissions | 5136 | PrivExchange
@@ -207,7 +208,6 @@ TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | OpenSSH serv
 TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | OpenSSH server firewall configuration (firewall) | 2004 | SSH server
 TA0005-Defense Evasion | T1562.004-Disable/modify firewall (rule) | OpenSSH server firewall configuration (PowerShell) | 800 or 4103 or 4104 | SSH server
 TA0005-Defense Evasion | T1564.006-Hide Artifacts: Run Virtual Instance | WSL for Windows installation detected (command) | 1 or 4688 | 
-TA0005-Defense Evasion | T1564.006-Hide Artifacts: Run Virtual Instance | WSL for Windows installation detected (command) | 9 | 
 TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS credential dump with LSASSY (kernel) | 4656 or 4663 | 
 TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS credential dump with LSASSY (PowerShell) | 800 or 4103 or 4104 | 
 TA0006-Credential Access | T1003.001-Credential dumping: LSASS | LSASS credential dump with LSASSY (process) | 1 or 4688 | 
@@ -243,6 +243,7 @@ TA0006-Credential Access | T1555.004-Windows Credential Manager | Vault credenti
 TA0006-Credential Access | T1555-Credentials from Password Stores | Suspicious Active Directory DPAPI attributes accessed | 4662 | 
 TA0006-Credential Access | T1555-Credentials from Password Stores | User files dump via network share | 5145 | DonPapi, Lazagne
 TA0006-Credential Access | T1557.001-MiM:LLMNR/NBT-NS Poisoning and SMB Relay | Discovery for print spooler bug abuse via named pipe | 5145 | 
+TA0006-Credential Access | T1557.001-MiM:LLMNR/NBT-NS Poisoning and SMB Relay | DNS wildcard zone entry | 515 | 
 TA0006-Credential Access | T1558.001-Golden Ticket | Kerberos TGS ticket request related to a potential Golden ticket | 4769 | Golden ticket
 TA0006-Credential Access | T1558.001-Golden Ticket | SMB Admin share accessed with a forged Golden ticket | 5140 or 5145 | Golden ticket
 TA0006-Credential Access | T1558.001-Golden Ticket | Success login impersonation with forged Golden ticket | 4624 | Golden ticket
@@ -250,6 +251,10 @@ TA0006-Credential Access | T1558.003-Kerberoasting | KerberOAST ticket (TGS) req
 TA0006-Credential Access | T1558.004-Steal or Forge Kerberos Tickets: AS-REP Roasting | Kerberos AS-REP Roasting ticket request detected | 4768 | AS-REP Roasting
 TA0006-Credential Access | T1558-Steal or Forge Kerberos Tickets | Kerberos ticket without a trailing $  | 4768 or 4769 | CVE-2021-42278/42287 & SAM-the-admin
 TA0006-Credential Access | T1558-Steal or Forge Kerberos Tickets | Suspicious Kerberos proxiable ticket | 4768 | CVE-2021-42278/42287 & SAM-the-admin
+TA0006-Credential Access | T1649- Steal or Forge Authentication Certificates  | ADCS ESC1 certificate request | 39 | 
+TA0006-Credential Access | T1649- Steal or Forge Authentication Certificates  | ADCS ESC2 certificate request | 4886 or 4887 | 
+TA0006-Credential Access | T1649- Steal or Forge Authentication Certificates  | ADCS ESC3 certificate request | 4886 or 4887 | 
+TA0006-Credential Access | T1649- Steal or Forge Authentication Certificates  | ADCS ESC7 permission change | 4882 | 
 TA0007-Discovery | T1016-System Network Configuration Discovery | Firewall configuration enumerated (command) | 1 or 4688 | 
 TA0007-Discovery | T1016-System Network Configuration Discovery | Firewall configuration enumerated (PowerShell) | 800 or 4103 or 4104 | 
 TA0007-Discovery | T1016-System Network Configuration Discovery | Tentative of zone transfer from a non DNS server detected | 6004 (DNSserver) | 
