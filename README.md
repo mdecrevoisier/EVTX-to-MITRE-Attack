@@ -158,6 +158,7 @@ TA0004-Privilege Escalation | T1574.002-DLL Side-Loading | External printer mapp
 TA0004-Privilege Escalation | T1574.002-DLL Side-Loading | New external device added  | 6416 | PrintNightmare (CVE-2021-1675 / CVE-2021-34527)
 TA0004-Privilege Escalation | T1574.002-DLL Side-Loading | Printer spool driver from Mimikatz installed  | 808 or 354 or 321 | PrintNightmare (CVE-2021-1675 / CVE-2021-34527)
 TA0004-Privilege Escalation | T1574.002-DLL Side-Loading | Spool process spawned a CMD shell | 1 or 4688 | PrintNightmare (CVE-2021-1675 / CVE-2021-34527)
+TA0004-Privilege Escalation | T1068-Exploitation for Privilege Escalation | MinPlasma_CVE-2020-17103  | 12 or 13 | MinPlasma_CVE-2020-17103
 TA0005-Defense Evasion | T1027-Obfuscated Files or Information | Payload obfuscated transfer via service name | 1 or 4688 | Tchopper
 TA0005-Defense Evasion | T1070.001-Indicator Removal on Host | Event log file(s) cleared | 104 or 1102 | 
 TA0005-Defense Evasion | T1070.001-Indicator Removal on Host | Tentative of clearing event log file(s) detected (command) | 1 or 4688 | 
